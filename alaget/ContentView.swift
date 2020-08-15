@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var selection : Int = 0
+    
     var body: some View {
-        Text("Hello, world!").padding()
+        
+        TabView(selection: self.$selection){
+            Departure_View()
+            tabItem {
+                Image(systemName: (selection == 0) ? "magnifyingglass" : "magnifyingglass")
+                    .resizable()
+                    .imageScale(.large)
+                Text("EXPLOER")
+            }
+            .tag(0)
+        }
+        
     }
 }
 
