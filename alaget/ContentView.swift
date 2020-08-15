@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct ContentView: View {
+    @State var isPresented: Bool = false
     var body: some View {
         VStack{
             HStack{
@@ -15,7 +16,7 @@ struct MainView: View {
                 Text("Alaget")
                     .font(.custom("TrebuchetMS-Bold", size: 35))
                     .foregroundColor(Color.red.opacity(0.7))
-                    .padding([.top], 30)
+                    .padding([.top], 20)
                 Spacer()
             }
             
@@ -24,6 +25,7 @@ struct MainView: View {
                 ScrollView{
                     
                     Button(action: {
+                        self.isPresented = true
                     }) {
                         ZStack{
                             Image("flight")
@@ -52,6 +54,7 @@ struct MainView: View {
                                 
                                 Spacer()
                                 Button(action: {
+                                    self.isPresented = true
                                 }) {
                                     Text("Exlpoer")
                                         .padding([.top, .bottom], 10)
@@ -69,9 +72,14 @@ struct MainView: View {
                     }
                     .buttonStyle(ScaleButtonStyle())
                     .padding([.leading, .trailing], 30)
-                    .padding(.top, 20)
+                    .padding(.top, 30)
                     
                 }
+                
+                .fullScreenCover(isPresented: $isPresented){
+                    Main_View()
+                }
+                
                 .zIndex(2.0)
                 VStack(spacing: 5){
                     Spacer()
@@ -90,6 +98,6 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        ContentView()
     }
 }
