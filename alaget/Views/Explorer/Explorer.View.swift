@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct Explorer_View: View {
+    @State var selection: Int = 0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView(selection: self.$selection){
+            Departure_View().tabItem {
+                Image(systemName: (selection == 0) ? "magnifyingglass" : "magnifyingglass")
+                    .resizable()
+                    .imageScale(.large)
+                Text("EXPLOER")
+            }
+            .tag(0)
+            
+            Indox_View().tabItem {
+                Image(systemName: (selection == 0) ? "message" : "message")
+                    .resizable()
+                    .imageScale(.large)
+                Text("EXPLOER")
+            }
+            .tag(0)
+        }
     }
 }
 
