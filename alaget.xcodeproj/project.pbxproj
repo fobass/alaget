@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		7C39602E24E8490C00E6B3D7 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39602D24E8490C00E6B3D7 /* Extentions.swift */; };
 		7C39603024E84AD500E6B3D7 /* Main.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39602F24E84AD500E6B3D7 /* Main.View.swift */; };
 		7C39603424E85B1000E6B3D7 /* Indox.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39603324E85B1000E6B3D7 /* Indox.View.swift */; };
+		7C39603624E9009B00E6B3D7 /* Search.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39603524E9009B00E6B3D7 /* Search.View.swift */; };
+		7C39603B24E90BDD00E6B3D7 /* Explorer.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39603A24E90BDD00E6B3D7 /* Explorer.Model.swift */; };
+		7C39603E24E90DA300E6B3D7 /* Explorer.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39603D24E90DA300E6B3D7 /* Explorer.ViewModel.swift */; };
+		7C39604624E9145200E6B3D7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C39604524E9145200E6B3D7 /* SDWebImageSwiftUI */; };
+		7C39604824E9417400E6B3D7 /* Explorer.Detail.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39604724E9417400E6B3D7 /* Explorer.Detail.View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,10 @@
 		7C39602D24E8490C00E6B3D7 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		7C39602F24E84AD500E6B3D7 /* Main.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.View.swift; sourceTree = "<group>"; };
 		7C39603324E85B1000E6B3D7 /* Indox.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indox.View.swift; sourceTree = "<group>"; };
+		7C39603524E9009B00E6B3D7 /* Search.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.View.swift; sourceTree = "<group>"; };
+		7C39603A24E90BDD00E6B3D7 /* Explorer.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explorer.Model.swift; sourceTree = "<group>"; };
+		7C39603D24E90DA300E6B3D7 /* Explorer.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explorer.ViewModel.swift; sourceTree = "<group>"; };
+		7C39604724E9417400E6B3D7 /* Explorer.Detail.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explorer.Detail.View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C39604624E9145200E6B3D7 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +70,10 @@
 		7C39601524E83EEE00E6B3D7 /* alaget */ = {
 			isa = PBXGroup;
 			children = (
+				7C39603824E90B9800E6B3D7 /* ViewModel */,
+				7C39603724E90B8D00E6B3D7 /* Model */,
 				7C39602C24E848F600E6B3D7 /* Extentions */,
-				7C39602524E83F1E00E6B3D7 /* Views */,
+				7C39602524E83F1E00E6B3D7 /* View */,
 				7C39601624E83EEE00E6B3D7 /* alagetApp.swift */,
 				7C39602F24E84AD500E6B3D7 /* Main.View.swift */,
 				7C39601A24E83EF200E6B3D7 /* Assets.xcassets */,
@@ -79,7 +91,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		7C39602524E83F1E00E6B3D7 /* Views */ = {
+		7C39602524E83F1E00E6B3D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				7C39602824E8460200E6B3D7 /* ContentView.swift */,
@@ -87,13 +99,15 @@
 				7C39603224E85AE000E6B3D7 /* Profile */,
 				7C39602724E83FC300E6B3D7 /* Explorer */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		7C39602724E83FC300E6B3D7 /* Explorer */ = {
 			isa = PBXGroup;
 			children = (
 				7C39602A24E8461800E6B3D7 /* Explorer.View.swift */,
+				7C39603524E9009B00E6B3D7 /* Search.View.swift */,
+				7C39604724E9417400E6B3D7 /* Explorer.Detail.View.swift */,
 			);
 			path = Explorer;
 			sourceTree = "<group>";
@@ -121,6 +135,38 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		7C39603724E90B8D00E6B3D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C39603924E90BC400E6B3D7 /* Explorer */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C39603824E90B9800E6B3D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C39603C24E90D7500E6B3D7 /* Explorer */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C39603924E90BC400E6B3D7 /* Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				7C39603A24E90BDD00E6B3D7 /* Explorer.Model.swift */,
+			);
+			path = Explorer;
+			sourceTree = "<group>";
+		};
+		7C39603C24E90D7500E6B3D7 /* Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				7C39603D24E90DA300E6B3D7 /* Explorer.ViewModel.swift */,
+			);
+			path = Explorer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +183,9 @@
 			dependencies = (
 			);
 			name = alaget;
+			packageProductDependencies = (
+				7C39604524E9145200E6B3D7 /* SDWebImageSwiftUI */,
+			);
 			productName = alaget;
 			productReference = 7C39601324E83EEE00E6B3D7 /* alaget.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +213,9 @@
 				Base,
 			);
 			mainGroup = 7C39600A24E83EEE00E6B3D7;
+			packageReferences = (
+				7C39604424E9145200E6B3D7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 7C39601424E83EEE00E6B3D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,9 +245,13 @@
 				7C39603424E85B1000E6B3D7 /* Indox.View.swift in Sources */,
 				7C39602B24E8461800E6B3D7 /* Explorer.View.swift in Sources */,
 				7C39603024E84AD500E6B3D7 /* Main.View.swift in Sources */,
+				7C39603624E9009B00E6B3D7 /* Search.View.swift in Sources */,
+				7C39604824E9417400E6B3D7 /* Explorer.Detail.View.swift in Sources */,
 				7C39602924E8460200E6B3D7 /* ContentView.swift in Sources */,
 				7C39602E24E8490C00E6B3D7 /* Extentions.swift in Sources */,
 				7C39601724E83EEE00E6B3D7 /* alagetApp.swift in Sources */,
+				7C39603B24E90BDD00E6B3D7 /* Explorer.Model.swift in Sources */,
+				7C39603E24E90DA300E6B3D7 /* Explorer.ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C39604424E9145200E6B3D7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C39604524E9145200E6B3D7 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C39604424E9145200E6B3D7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C39600B24E83EEE00E6B3D7 /* Project object */;
 }

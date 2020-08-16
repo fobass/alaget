@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct Main_View: View {
+    
+    
     @State var isPresented: Bool = false
     var body: some View {
         VStack{
             HStack{
                 Spacer()
-                Text("Alaget")
+                Text((Bundle.main.name.capitalized))
                     .font(.custom("TrebuchetMS-Bold", size: 35))
                     .foregroundColor(Color.red.opacity(0.6))
                     .shadow(color: Color.red.opacity(0.8), radius:  2)

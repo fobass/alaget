@@ -62,3 +62,18 @@ extension Bundle {
     }
     
 }
+
+extension Color {
+
+    static let lightBackgroundColor = Color(white: 1.0)
+
+    static let darkBackgroundColor = Color.black
+
+    static func backgroundColor(for colorScheme: ColorScheme) -> Color {
+        if colorScheme == .dark {
+            return darkBackgroundColor
+        } else {
+            return lightBackgroundColor
+        }
+    }
+}
