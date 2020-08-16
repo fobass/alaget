@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Main_View: View {
     @State var isPresented: Bool = false
     var body: some View {
         VStack{
@@ -15,15 +15,15 @@ struct ContentView: View {
                 Spacer()
                 Text("Alaget")
                     .font(.custom("TrebuchetMS-Bold", size: 35))
-                    .foregroundColor(Color.red.opacity(0.7))
-                    .padding([.top], 20)
+                    .foregroundColor(Color.red.opacity(0.6))
+                    .shadow(color: Color.red.opacity(0.8), radius:  2)
+                    .padding([.top], 30)
                 Spacer()
             }
-            
             .frame(height:  40, alignment: .center)
+            
             ZStack{
                 ScrollView{
-                    
                     Button(action: {
                         self.isPresented = true
                     }) {
@@ -31,9 +31,8 @@ struct ContentView: View {
                             Image("flight")
                                 .resizable()
                                 .frame(height: 500, alignment: .center)
-                                .cornerRadius(10)
-                                .shadow(radius: 5)
-                            
+                                .cornerRadius(15)
+                                .shadow(color: Color.gray.opacity(0.3), radius:  5)
                             VStack(alignment: .center){
                                 VStack(spacing: 10){
                                     Text("People fly different direction today")
@@ -43,7 +42,6 @@ struct ContentView: View {
                                         .multilineTextAlignment(.center)
                                 }
                                 .padding([.top, .bottom], 25)
-                                
                                 VStack(spacing: 10){
                                     Text("Send something to your family or friends. Find who is flying to your country")
                                         .foregroundColor(Color.white.opacity(0.9))
@@ -51,7 +49,6 @@ struct ContentView: View {
                                         .lineLimit(5)
                                         .multilineTextAlignment(.center)
                                 }
-                                
                                 Spacer()
                                 Button(action: {
                                     self.isPresented = true
@@ -73,22 +70,25 @@ struct ContentView: View {
                     .buttonStyle(ScaleButtonStyle())
                     .padding([.leading, .trailing], 30)
                     .padding(.top, 30)
-                    
                 }
                 
                 .fullScreenCover(isPresented: $isPresented){
-                    Main_View()
+                    ContentView()
                 }
                 
                 .zIndex(2.0)
                 VStack(spacing: 5){
                     Spacer()
-                    Text("© 2020-2021 Alaget Inc. All Rights Reserved ")
+                    Text("© 2020-2021 \(Bundle.main.name.capitalized) Inc. All Rights Reserved ")
                         .font(.custom("ArialRoundedMT", size: 11))
                         .foregroundColor(Color.gray)
-                    //                    Text("Version 1.0")
+                    Text("Version: \(Bundle.main.version)")
+                        .font(.custom("TrebuchetMS", size: 12))
+                        .foregroundColor(Color.gray)
+                    //                    Text("Build: \(Bundle.main.build)")
                     //                        .font(.custom("TrebuchetMS", size: 12))
                     //                        .foregroundColor(Color.gray)
+                    
                 }
                 .zIndex(1.0)
             }
@@ -96,8 +96,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Main_View_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Main_View()
+//            .preferredColorScheme(.dark)
     }
 }
