@@ -158,7 +158,8 @@ struct FliersTodayCell: View {
                                         Spacer()
                                         Text("7:00 PM")
                                             .font(.custom("TrebuchetMS-Bold", size: 13))
-                                            .foregroundColor(Color.red.opacity(0.7))
+                                            
+                                            .foregroundColor(Color(hue: 0.289, saturation: 0.631, brightness: 0.735))
                                     }
                                     Spacer()
                                     VStack{
@@ -187,7 +188,7 @@ struct FliersTodayCell: View {
                                 
                             }
                             .padding(.all, 15)
-                            .frame(width: 170, height: 150)
+                            .frame(width: 175, height: 150)
                             .background(Color.backgroundColor(for: self.colorScheme))
                             
                             
@@ -200,7 +201,7 @@ struct FliersTodayCell: View {
                 .padding(.top, 5)
                 .padding([.leading, .trailing], 20)
                 .fullScreenCover(isPresented: $isPresented){
-                    Explorer_Detail_View(explorer: self.store.selectedItem, isFullView: true)
+                    Explorer_List_View(explorer: self.store.selectedItem, isFullView: true)
 //
 //                    if (self.store.selectedItem.fliers.count == 1) {
 //                        if (self.store.selectedItem.fliers[0].name != "") {
@@ -246,9 +247,9 @@ struct TodayImagesCell: View {
                         .shadow(color: Color.gray.opacity(0.5), radius: 2)
                     Text("+\(fliers.count - 3)")
                         .font(.custom("TrebuchetMS-Bold", size: 14))
-                        .foregroundColor(Color.black.opacity(0.6))
+                        .foregroundColor(Color.red.opacity(0.7))
                 }
-                .offset(x: -30, y: 0)
+                .offset(x: 0, y: 0)
             }
             Spacer()
             
@@ -297,7 +298,7 @@ struct FliersUpcomingCell: View {
                                     VStack(alignment: .trailing){
                                         Text(item.date)
                                             .font(.custom("TrebuchetMS-Bold", size: 13))
-                                            .foregroundColor(Color.red.opacity(0.7))
+                                            .foregroundColor(Color(hue: 0.289, saturation: 0.631, brightness: 0.735))
                                         Spacer()
                                         UpcomingImagesCell(fliers: item.members)
                                     
@@ -362,7 +363,7 @@ struct UpcomingImagesCell: View {
                         .shadow(color: Color.gray.opacity(0.5), radius: 2)
                     Text("+\(fliers.count - 3)")
                         .font(.custom("TrebuchetMS-Bold", size: 14))
-                        .foregroundColor(Color.black.opacity(0.6))
+                        .foregroundColor(Color.red.opacity(0.7))
                 }
                 //.offset(x: 0, y: 0)
             }

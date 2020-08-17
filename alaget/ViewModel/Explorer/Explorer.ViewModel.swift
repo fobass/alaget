@@ -25,7 +25,12 @@ final class ExplorerStore: ObservableObject {
                 Member.init(name: "Julia", remark: "", isVerified: true, distance: 4.0, avatar: "",flyDate: "Today"),
             ]),
 
-            Explorer.init(country: "China", city: "Bejin", date: "Augst, 01", isToday: false, members: [
+            Explorer.init(country: "China", city: "Bejin", date: "Augst, 01", isToday: true, members: [
+                Member.init(name: "Low Chan", remark: "", isVerified: true, distance: 4.0, avatar: "https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg", flyDate: "Today"),
+                Member.init(name: "Yun Gau", remark: "", isVerified: true, distance: 4.0, avatar: "https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg", flyDate: "Today"),
+                Member.init(name: "Max Lau", remark: "", isVerified: true, distance: 4.0, avatar: "https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg", flyDate: "Today"),
+            ]),
+            Explorer.init(country: "China", city: "Bejin", date: "Augst, 01", isToday: true, members: [
                 Member.init(name: "Low Chan", remark: "", isVerified: true, distance: 4.0, avatar: "https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg", flyDate: "Today"),
                 Member.init(name: "Yun Gau", remark: "", isVerified: true, distance: 4.0, avatar: "https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg", flyDate: "Today"),
                 Member.init(name: "Max Lau", remark: "", isVerified: true, distance: 4.0, avatar: "https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg", flyDate: "Today"),
