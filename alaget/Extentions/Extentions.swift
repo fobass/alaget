@@ -67,8 +67,18 @@ extension Color {
 
     static let lightBackgroundColor = Color(white: 1.0)
 
-    static let darkBackgroundColor = Color("itemColor")
+    static let darkItemBackgroundColor = Color("itemColor")
+    
+    static let darkBackgroundColor = Color(white: 0.0)
 
+    static func itemBackgroundColor(for colorScheme: ColorScheme) -> Color {
+        if colorScheme == .dark {
+            return darkItemBackgroundColor
+        } else {
+            return lightBackgroundColor
+        }
+    }
+    
     static func backgroundColor(for colorScheme: ColorScheme) -> Color {
         if colorScheme == .dark {
             return darkBackgroundColor
@@ -76,6 +86,8 @@ extension Color {
             return lightBackgroundColor
         }
     }
+    
+    
     
     static func shadowColor(for colorScheme: ColorScheme) -> Color {
         if colorScheme == .dark {

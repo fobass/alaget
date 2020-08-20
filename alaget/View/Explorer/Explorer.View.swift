@@ -71,7 +71,7 @@ struct Explorer_View: View {
                                 .zIndex(106)
                             }
                             
-                            .background(Color.backgroundColor(for: self.colorScheme))
+                            .background(Color.itemBackgroundColor(for: self.colorScheme))
                             .cornerRadius(30)
                         }
                         .padding([.leading, .trailing], 20)
@@ -113,6 +113,7 @@ struct Explorer_View: View {
 
                 }
             }
+            
             .zIndex(101)
             .shadow(color: Color.gray.opacity(0.3),  radius: 4)
             
@@ -189,7 +190,7 @@ struct FliersTodayCell: View {
                             }
                             .padding(.all, 15)
                             .frame(width: 175, height: 150)
-                            .background(Color.backgroundColor(for: self.colorScheme))
+                            .background(Color.itemBackgroundColor(for: self.colorScheme))
                             
                             
                         })
@@ -310,7 +311,7 @@ struct FliersUpcomingCell: View {
                             }
                             .padding(.all, 15)
                             .frame(height: 70)
-                            .background(Color.backgroundColor(for: self.colorScheme))
+                            .background(Color.itemBackgroundColor(for: self.colorScheme))
 //                            .fullScreenCover(isPresented: $isPresented){
 //
 //                                if (self.store.selectedItem.fliers.count == 1) {

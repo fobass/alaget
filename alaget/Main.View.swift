@@ -68,44 +68,69 @@ struct Main_View: View {
                     Spacer(minLength: 20)
                     VStack(spacing: 10) {
                         //                    Spacer()
+                        
                         Button(action: {
                             self.isPresented = true
                         }) {
-                            Text("Facebook")
-                                .foregroundColor(.white)
-                                .font(.custom("TrebuchetMS-Bold", size: 16))
+                            HStack{
+                                Image("google")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .foregroundColor(Color.white)
+                                Text("Login with Google")
+                                    .foregroundColor(Color.blue.opacity(0.6))
+                                    .font(.custom("TrebuchetMS-Bold", size: 16))
+                            }
                                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
-                                .background(Color.blue)
+                               // .background(Color(red: 0.257, green: 0.534, blue: 0.962))
+                            .background(Color.white)
+                        }
+                        .cornerRadius(10)
+                        .shadow(color: Color.blue.opacity(0.4), radius:  1)
+                        
+                        Button(action: {
+                            self.isPresented = true
+                        }) {
+                            
+                            HStack{
+                                Image("facebook")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(Color.white)
+                                Text("Login with Facebook")
+                                    .foregroundColor(.white)
+                                    .font(.custom("TrebuchetMS-Bold", size: 16))
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
+                            .background(Color(red: 0.259, green: 0.41, blue: 0.706))
+                            
                             
                         }
                         .cornerRadius(10)
-                        .shadow(color: Color.gray.opacity(0.7), radius:  2)
+                        .shadow(color: Color.blue, radius:  1)
                         
                         
                         Button(action: {
                             self.isPresented = true
                         }) {
-                            Text("Google")
-                                .foregroundColor(.white)
-                                .font(.custom("TrebuchetMS-Bold", size: 16))
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
-                                .background(Color.blue)
-                        }
-                        .cornerRadius(10)
-                        .shadow(color: Color.gray.opacity(0.7), radius:  2)
-                        
-                        Button(action: {
-                            self.isPresented = true
-                        }) {
-                            Text("Apple")
-                                .foregroundColor(.white)
-                                .font(.custom("TrebuchetMS-Bold", size: 16))
-                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
-                                .background(Color.black)
+                            HStack{
+                                Image(systemName: "applelogo")
+                                    .resizable()
+                                    .frame(width: 20, height: 25, alignment: .center)
+                                    .foregroundColor(Color.white)
+//                                    .padding(.leading, 20)
+                                Text("Login with Apple")
+                                    .foregroundColor(.white)
+                                    .font(.custom("TrebuchetMS-Bold", size: 16))
+//                                Spacer()
+                            }
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
+                            .background(Color(red: 0.139, green: 0.158, blue: 0.179))
                         }
                         
                         .cornerRadius(10)
-                        .shadow(color: Color.gray.opacity(0.7), radius:  2)
+                        .shadow(color: Color.black, radius:  1)
+                        
                     }
                    
                     

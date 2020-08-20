@@ -32,7 +32,7 @@ struct ContentView: View {
                 }
                 .tag(0)
                 
-                Indox_View().tabItem {
+                Inbox_View().tabItem {
                     Image(systemName: (selection == 0) ? "message" : "message")
                         .resizable()
                         .imageScale(.large)

@@ -75,10 +75,13 @@ struct Explorer_List_View: View {
                                     
                                     Spacer()
                                 }
+                                .background(Color.backgroundColor(for: self.colorScheme))
                             }
                             .buttonStyle(PlainButtonStyle())
+                            
                             Divider()
                         }
+                        
                     }
                     .padding(.all, 20)
                     
@@ -97,7 +100,7 @@ struct Explorer_List_View: View {
                         .font(.custom("ArialRoundedMTBold", size: 30))
                         .foregroundColor(Color.red.opacity(0.7))
                 })
-                .background(Color.backgroundColor(for: self.colorScheme))
+                .background(Color.itemBackgroundColor(for: self.colorScheme))
                 .cornerRadius(30)
                 .shadow(color: Color.red.opacity(0.3),  radius: 1)
                 )

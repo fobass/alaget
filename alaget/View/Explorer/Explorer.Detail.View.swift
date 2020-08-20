@@ -67,6 +67,7 @@ struct Explorer_Detail_View: View {
                             Text("Follow")
                                 .font(.footnote)
                                 .foregroundColor(Color.white.opacity(0.9))
+                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
                         }
                         .frame(width: 130, height: 30)
                         .cornerRadius(10)
@@ -80,6 +81,8 @@ struct Explorer_Detail_View: View {
                             Text("Message")
                                 .font(.footnote)
                                 .foregroundColor(Color.white.opacity(0.9))
+                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
+//                                .background(Color.blue)
                             
                         }
                         
@@ -143,7 +146,7 @@ struct Explorer_Detail_View: View {
                         
                         VStack(alignment: .center){
                             HStack{
-                                Text("store1.list[0] test  djgh slkdfj slkfj slkfj slkdfjslkdfskdfjsldkfj ")
+                                Text("store1.list[0] test  djgh slkdfj slkfj slkfj  ")
                                     .font(.custom("TrebuchetMS-Bold", size: 17))
                                     .foregroundColor(Color.blue.opacity(0.8))
                             }
@@ -154,7 +157,7 @@ struct Explorer_Detail_View: View {
                     .padding(.all, 10)
                 }
                 .frame(height: 180, alignment: .center)
-                .background(Color.backgroundColor(for: self.colorScheme))
+                .background(Color.itemBackgroundColor(for: self.colorScheme))
                 .cornerRadius(5)
                 .shadow(color: Color.gray.opacity(0.4), radius: 2)
                 .buttonStyle(ScaleButtonStyle())
@@ -183,7 +186,7 @@ struct ProfileUpcomingFlyCell: View {
         VStack{
             HStack{
                 Text("Upcomiing trips")
-                    .accentColor(Color.black.opacity(0.7))
+//                    .accentColor(Color.black.opacity(0.7))
                     .font(.custom("TrebuchetMS-Bold", size: 16))
                 Spacer()
             }
@@ -241,9 +244,9 @@ struct ProfileUpcomingFlyCell: View {
                             .padding([.top, .leading, .trailing], 10)
                         }
                         .frame(width: 160, height: 150, alignment: .center)
-                        .background(Color.backgroundColor(for: self.colorScheme))
+                        .background(Color.itemBackgroundColor(for: self.colorScheme))
                         .cornerRadius(5)
-                        .shadow(color: Color.gray.opacity(0.4), radius: 2)
+                        .shadow(color: Color.gray.opacity(0.5), radius: 1)
                         .buttonStyle(ScaleButtonStyle())
                     }
                 }
