@@ -76,4 +76,12 @@ extension Color {
             return lightBackgroundColor
         }
     }
+    
+    static func shadowColor(for colorScheme: ColorScheme) -> Color {
+        if colorScheme == .dark {
+            return Color.gray.opacity(0.3)
+        } else {
+            return Color.gray.opacity(0.5)
+        }
+    }
 }

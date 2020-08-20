@@ -376,6 +376,6 @@ struct UpcomingImagesCell: View {
 struct Explorer_View_Previews: PreviewProvider {
     static var previews: some View {
         Explorer_View()
-//            .preferredColorScheme(.dark)
+            .preferredColorScheme(.dark)
     }
 }

@@ -76,9 +76,9 @@
 		7C39601524E83EEE00E6B3D7 /* alaget */ = {
 			isa = PBXGroup;
 			children = (
+				7C39602C24E848F600E6B3D7 /* Extentions */,
 				7C39603824E90B9800E6B3D7 /* ViewModel */,
 				7C39603724E90B8D00E6B3D7 /* Model */,
-				7C39602C24E848F600E6B3D7 /* Extentions */,
 				7C39602524E83F1E00E6B3D7 /* View */,
 				7C39601624E83EEE00E6B3D7 /* alagetApp.swift */,
 				7C39602F24E84AD500E6B3D7 /* Main.View.swift */,
