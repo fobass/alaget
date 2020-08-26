@@ -16,6 +16,7 @@ struct Explorer_View: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     @ObservedObject var store = ExplorerStore()
+    private let rows = [GridItem(.fixed(100))]
     var body: some View {
         VStack{
             HStack{
@@ -113,10 +114,8 @@ struct Explorer_View: View {
 
                 }
             }
-            
             .zIndex(101)
             .shadow(color: Color.gray.opacity(0.3),  radius: 4)
-            
             
             ScrollView{
                 FliersTodayCell()
@@ -196,6 +195,7 @@ struct FliersTodayCell: View {
                         })
                         .cornerRadius(5)
                         .shadow(color: Color.gray.opacity(0.4), radius: 2)
+                        
                     }
                     .buttonStyle(ScaleButtonStyle())
                 }
@@ -203,18 +203,7 @@ struct FliersTodayCell: View {
                 .padding([.leading, .trailing], 20)
                 .fullScreenCover(isPresented: $isPresented){
                     Explorer_List_View(explorer: self.store.selectedItem, isFullView: true)
-//
-//                    if (self.store.selectedItem.fliers.count == 1) {
-//                        if (self.store.selectedItem.fliers[0].name != "") {
-//                            Fliers_Profile_View(uuid: self.store.selectedItem.id.uuidString)
-//                        }
-//                    } else {
-//                        Fliers_Detail_View(fliersGroup: self.store.selectedItem, isFullView: true)
-//                    }
                 }
-//                .onAppear {
-//                    self.store.fetch()
-//                }
                 Spacer()
                 
             }

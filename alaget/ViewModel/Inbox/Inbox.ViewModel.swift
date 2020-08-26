@@ -21,3 +21,32 @@ final class InboxStore: ObservableObject{
         ]
     }
 }
+
+class ChatHelper : ObservableObject {
+//    var didChange = PassthroughSubject<Void, Never>()
+    @Published var realTimeMessages : [Message] = []
+    
+    func sendMessage(_ chatMessage: Message) {
+        realTimeMessages.append(chatMessage)
+//        didChange.send(())
+    }
+    
+//    init() {
+//        self.realTimeMessages = [
+//            Message.init(content: "FASdSADs", user: User.init(name: "Test", avatar: "person", isCurrentUser: false)),
+//            Message.init(content: "FASdSADaq", user: User.init(name: "Test", avatar: "person", isCurrentUser: false)),
+//            Message.init(content: "FASdSADq", user: User.init(name: "Test", avatar: "person", isCurrentUser: true)),
+//
+//        ]
+//    }
+}
+
+
+class ScrollToModel: ObservableObject {
+    enum Action {
+        case end
+        case top
+    }
+    @Published var direction: Action? = nil
+}
+

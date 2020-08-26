@@ -21,7 +21,7 @@ struct Explorer_List_View: View {
                 ScrollView(){
                     VStack{
                         ForEach(explorer.members){ item in
-                            NavigationLink(destination: Explorer_Detail_View()) {
+                            NavigationLink(destination: Explorer_Detail_View(dialogScreen: false)) {
                                 HStack{
                                     WebImage(url: URL(string: item.avatar))
                                         .resizable()

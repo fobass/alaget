@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C33E72724F2A14700F69D09 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 7C33E72624F2A14700F69D09 /* FacebookLogin */; };
+		7C33E72924F2A14700F69D09 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 7C33E72824F2A14700F69D09 /* FacebookShare */; };
+		7C33E72B24F2A14700F69D09 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7C33E72A24F2A14700F69D09 /* FacebookCore */; };
 		7C39601724E83EEE00E6B3D7 /* alagetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39601624E83EEE00E6B3D7 /* alagetApp.swift */; };
 		7C39601B24E83EF200E6B3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C39601A24E83EF200E6B3D7 /* Assets.xcassets */; };
 		7C39601E24E83EF200E6B3D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C39601D24E83EF200E6B3D7 /* Preview Assets.xcassets */; };
@@ -19,6 +22,8 @@
 		7C39603E24E90DA300E6B3D7 /* Explorer.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39603D24E90DA300E6B3D7 /* Explorer.ViewModel.swift */; };
 		7C39604624E9145200E6B3D7 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7C39604524E9145200E6B3D7 /* SDWebImageSwiftUI */; };
 		7C39604824E9417400E6B3D7 /* Explorer.List.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39604724E9417400E6B3D7 /* Explorer.List.View.swift */; };
+		7C4687D524F403A700A655E1 /* Profile.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4687D424F403A700A655E1 /* Profile.View.swift */; };
+		7C4687D724F405FD00A655E1 /* env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4687D624F405FD00A655E1 /* env.swift */; };
 		7C54CD9324EAB601000523E7 /* Explorer.Detail.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54CD9224EAB601000523E7 /* Explorer.Detail.View.swift */; };
 		7C54CD9624EAB97C000523E7 /* Profile.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54CD9524EAB97C000523E7 /* Profile.Model.swift */; };
 		7C54CD9924EAB9CF000523E7 /* Profile.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54CD9824EAB9CF000523E7 /* Profile.ViewModel.swift */; };
@@ -26,9 +31,27 @@
 		7C54CDA124EEB21D000523E7 /* Inbox.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54CDA024EEB21D000523E7 /* Inbox.Model.swift */; };
 		7C54CDA624EEB36B000523E7 /* Inbox.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54CDA524EEB36B000523E7 /* Inbox.ViewModel.swift */; };
 		7C54CDA824EEBDC9000523E7 /* Inbox.Detail.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54CDA724EEBDC9000523E7 /* Inbox.Detail.View.swift */; };
+		7C54CDAB24F15B19000523E7 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54CDAA24F15B19000523E7 /* KeyboardResponder.swift */; };
+		7CB0A8CA24F40D2E005354FE /* Pods_alaget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAE28763BC4450FC163E790 /* Pods_alaget.framework */; };
+		7CB0A8CB24F40D2E005354FE /* Pods_alaget.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAE28763BC4450FC163E790 /* Pods_alaget.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7CB0A8CC24F40D2E005354FE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7CB0A8CB24F40D2E005354FE /* Pods_alaget.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5AAE28763BC4450FC163E790 /* Pods_alaget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alaget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C39601324E83EEE00E6B3D7 /* alaget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alaget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C39601624E83EEE00E6B3D7 /* alagetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alagetApp.swift; sourceTree = "<group>"; };
 		7C39601A24E83EF200E6B3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +65,9 @@
 		7C39603A24E90BDD00E6B3D7 /* Explorer.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explorer.Model.swift; sourceTree = "<group>"; };
 		7C39603D24E90DA300E6B3D7 /* Explorer.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explorer.ViewModel.swift; sourceTree = "<group>"; };
 		7C39604724E9417400E6B3D7 /* Explorer.List.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explorer.List.View.swift; sourceTree = "<group>"; };
+		7C4687D224F3E5F000A655E1 /* alaget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = alaget.entitlements; sourceTree = "<group>"; };
+		7C4687D424F403A700A655E1 /* Profile.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.View.swift; sourceTree = "<group>"; };
+		7C4687D624F405FD00A655E1 /* env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = env.swift; sourceTree = "<group>"; };
 		7C54CD9224EAB601000523E7 /* Explorer.Detail.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explorer.Detail.View.swift; sourceTree = "<group>"; };
 		7C54CD9524EAB97C000523E7 /* Profile.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.Model.swift; sourceTree = "<group>"; };
 		7C54CD9824EAB9CF000523E7 /* Profile.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.ViewModel.swift; sourceTree = "<group>"; };
@@ -49,6 +75,9 @@
 		7C54CDA024EEB21D000523E7 /* Inbox.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.Model.swift; sourceTree = "<group>"; };
 		7C54CDA524EEB36B000523E7 /* Inbox.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.ViewModel.swift; sourceTree = "<group>"; };
 		7C54CDA724EEBDC9000523E7 /* Inbox.Detail.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.Detail.View.swift; sourceTree = "<group>"; };
+		7C54CDAA24F15B19000523E7 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		B69D5B8CD25C22040E50DDFF /* Pods-alaget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alaget.debug.xcconfig"; path = "Target Support Files/Pods-alaget/Pods-alaget.debug.xcconfig"; sourceTree = "<group>"; };
+		C2C9076E3C9ED2F47F157779 /* Pods-alaget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alaget.release.xcconfig"; path = "Target Support Files/Pods-alaget/Pods-alaget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,18 +85,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C33E72724F2A14700F69D09 /* FacebookLogin in Frameworks */,
 				7C39604624E9145200E6B3D7 /* SDWebImageSwiftUI in Frameworks */,
+				7C33E72924F2A14700F69D09 /* FacebookShare in Frameworks */,
+				7CB0A8CA24F40D2E005354FE /* Pods_alaget.framework in Frameworks */,
+				7C33E72B24F2A14700F69D09 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E7297FC2F70121BDF032D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AAE28763BC4450FC163E790 /* Pods_alaget.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DDC2CC116470743123FD8CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B69D5B8CD25C22040E50DDFF /* Pods-alaget.debug.xcconfig */,
+				C2C9076E3C9ED2F47F157779 /* Pods-alaget.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7C39600A24E83EEE00E6B3D7 = {
 			isa = PBXGroup;
 			children = (
 				7C39601524E83EEE00E6B3D7 /* alaget */,
 				7C39601424E83EEE00E6B3D7 /* Products */,
+				4DDC2CC116470743123FD8CD /* Pods */,
+				1E7297FC2F70121BDF032D76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +134,8 @@
 		7C39601524E83EEE00E6B3D7 /* alaget */ = {
 			isa = PBXGroup;
 			children = (
+				7C4687D224F3E5F000A655E1 /* alaget.entitlements */,
+				7C54CDA924F15B07000523E7 /* Helper */,
 				7C39602C24E848F600E6B3D7 /* Extentions */,
 				7C39603824E90B9800E6B3D7 /* ViewModel */,
 				7C39603724E90B8D00E6B3D7 /* Model */,
@@ -91,6 +145,7 @@
 				7C39601A24E83EF200E6B3D7 /* Assets.xcassets */,
 				7C39601F24E83EF200E6B3D7 /* Info.plist */,
 				7C39601C24E83EF200E6B3D7 /* Preview Content */,
+				7C4687D624F405FD00A655E1 /* env.swift */,
 			);
 			path = alaget;
 			sourceTree = "<group>";
@@ -136,6 +191,7 @@
 		7C39603224E85AE000E6B3D7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7C4687D424F403A700A655E1 /* Profile.View.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -217,6 +273,14 @@
 			path = Inbox;
 			sourceTree = "<group>";
 		};
+		7C54CDA924F15B07000523E7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7C54CDAA24F15B19000523E7 /* KeyboardResponder.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,9 +288,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C39602224E83EF200E6B3D7 /* Build configuration list for PBXNativeTarget "alaget" */;
 			buildPhases = (
+				5B2D04E5C870F7622F229E59 /* [CP] Check Pods Manifest.lock */,
 				7C39600F24E83EEE00E6B3D7 /* Sources */,
 				7C39601024E83EEE00E6B3D7 /* Frameworks */,
 				7C39601124E83EEE00E6B3D7 /* Resources */,
+				8EA8A4E95569663A0DAC9477 /* [CP] Embed Pods Frameworks */,
+				ADF77DF595160BC19663EAA1 /* [CP] Copy Pods Resources */,
+				7CB0A8CC24F40D2E005354FE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +303,9 @@
 			name = alaget;
 			packageProductDependencies = (
 				7C39604524E9145200E6B3D7 /* SDWebImageSwiftUI */,
+				7C33E72624F2A14700F69D09 /* FacebookLogin */,
+				7C33E72824F2A14700F69D09 /* FacebookShare */,
+				7C33E72A24F2A14700F69D09 /* FacebookCore */,
 			);
 			productName = alaget;
 			productReference = 7C39601324E83EEE00E6B3D7 /* alaget.app */;
@@ -265,6 +336,7 @@
 			mainGroup = 7C39600A24E83EEE00E6B3D7;
 			packageReferences = (
 				7C39604424E9145200E6B3D7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				7C33E72524F2A14700F69D09 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 7C39601424E83EEE00E6B3D7 /* Products */;
 			projectDirPath = "";
@@ -287,14 +359,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5B2D04E5C870F7622F229E59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alaget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EA8A4E95569663A0DAC9477 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alaget/Pods-alaget-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alaget/Pods-alaget-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-alaget/Pods-alaget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADF77DF595160BC19663EAA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alaget/Pods-alaget-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-alaget/Pods-alaget-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-alaget/Pods-alaget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C39600F24E83EEE00E6B3D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7C54CD9324EAB601000523E7 /* Explorer.Detail.View.swift in Sources */,
+				7C54CDAB24F15B19000523E7 /* KeyboardResponder.swift in Sources */,
 				7C54CD9624EAB97C000523E7 /* Profile.Model.swift in Sources */,
 				7C39602B24E8461800E6B3D7 /* Explorer.View.swift in Sources */,
+				7C4687D724F405FD00A655E1 /* env.swift in Sources */,
 				7C54CDA124EEB21D000523E7 /* Inbox.Model.swift in Sources */,
 				7C54CD9924EAB9CF000523E7 /* Profile.ViewModel.swift in Sources */,
 				7C39603024E84AD500E6B3D7 /* Main.View.swift in Sources */,
@@ -304,6 +437,7 @@
 				7C39602924E8460200E6B3D7 /* ContentView.swift in Sources */,
 				7C39602E24E8490C00E6B3D7 /* Extentions.swift in Sources */,
 				7C39601724E83EEE00E6B3D7 /* alagetApp.swift in Sources */,
+				7C4687D524F403A700A655E1 /* Profile.View.swift in Sources */,
 				7C54CDA824EEBDC9000523E7 /* Inbox.Detail.View.swift in Sources */,
 				7C39603B24E90BDD00E6B3D7 /* Explorer.Model.swift in Sources */,
 				7C54CDA624EEB36B000523E7 /* Inbox.ViewModel.swift in Sources */,
@@ -432,9 +566,11 @@
 		};
 		7C39602324E83EF200E6B3D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B69D5B8CD25C22040E50DDFF /* Pods-alaget.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = alaget/alaget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"alaget/Preview Content\"";
 				DEVELOPMENT_TEAM = F746C67XXU;
@@ -454,9 +590,11 @@
 		};
 		7C39602424E83EF200E6B3D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C9076E3C9ED2F47F157779 /* Pods-alaget.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = alaget/alaget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"alaget/Preview Content\"";
 				DEVELOPMENT_TEAM = F746C67XXU;
@@ -498,6 +636,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7C33E72524F2A14700F69D09 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
 		7C39604424E9145200E6B3D7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -509,6 +655,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7C33E72624F2A14700F69D09 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C33E72524F2A14700F69D09 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		7C33E72824F2A14700F69D09 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C33E72524F2A14700F69D09 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		7C33E72A24F2A14700F69D09 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C33E72524F2A14700F69D09 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
 		7C39604524E9145200E6B3D7 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C39604424E9145200E6B3D7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;

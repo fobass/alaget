@@ -5,15 +5,44 @@
 //  Created by Ernist Isabekov on 17/08/2020.
 //
 
+
+// Swift
+//
+// AppDelegate.swift
+
 import SwiftUI
 import SDWebImageSwiftUI
 
 struct Explorer_Detail_View: View {
+    var dialogScreen : Bool
+    @State var isMessageScreen: Bool = false
+    @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     @ObservedObject var store = ProfileStore()
     @ObservedObject var store1 = ExplorerStore()
     var body: some View {
-        ScrollView{
+        VStack{
+            if (dialogScreen) {
+                HStack{
+                    Spacer()
+                    Button(action: {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        Image(systemName: "xmark.circle")
+                            .font(.custom("ArialRoundedMTBold", size: 30))
+                            .foregroundColor(Color.red.opacity(0.7))
+                        
+                    })
+                    .background(Color.itemBackgroundColor(for: self.colorScheme))
+                    .cornerRadius(30)
+                    .shadow(color: Color.red.opacity(0.3),  radius: 1)
+                    .padding([.trailing], 20)
+                    .padding([.top], 10)
+                    .padding([.bottom], 2)
+                }
+                
+            }
+            ScrollView{
             VStack{
                 HStack{
                     VStack(alignment: .leading, spacing: 5){
@@ -74,22 +103,20 @@ struct Explorer_Detail_View: View {
                         .background(Color.blue.opacity(0.7))
                         
                         Button(action: {
-                            //                        withAnimation {
-                            //                                self.isMessage = true
-                            //                        }
+                            withAnimation {
+                                self.isMessageScreen = true
+                            }
                         }) {
                             Text("Message")
                                 .font(.footnote)
                                 .foregroundColor(Color.white.opacity(0.9))
                                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40, maxHeight: 40)
-//                                .background(Color.blue)
                             
                         }
-                        
-                        //                            .fullScreenCover(isPresented: self.$isMessage){
-                        //                                Message_View().environmentObject(profileStore)
-                        //                            }
-                        
+                        .sheet(isPresented: $isMessageScreen) {
+                            Inbox_Detail_View(dialogScreen: true).environmentObject(ChatHelper())
+                        }
+
                         .frame(width: 140, height: 30)
                         .cornerRadius(10)
                         .background(Color.blue.opacity(0.7))
@@ -170,7 +197,9 @@ struct Explorer_Detail_View: View {
             ProfileUpcomingFlyCell()
             
         }
+        }
         .navigationBarTitle("", displayMode: .inline)
+        
     }
     
     func isVerifiedColor() -> Color {
@@ -260,7 +289,7 @@ struct ProfileUpcomingFlyCell: View {
 
 struct Explorer_Detail_View_Previews: PreviewProvider {
     static var previews: some View {
-        Explorer_Detail_View()
+        Explorer_Detail_View(dialogScreen: true)
             .preferredColorScheme(.dark)
     }
 }

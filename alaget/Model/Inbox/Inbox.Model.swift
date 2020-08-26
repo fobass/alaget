@@ -14,3 +14,13 @@ struct Inbox: Identifiable {
     var lastText: String
     var isReaded: Bool
 }
+
+struct Message: Hashable {
+    var content: String
+    var user: User
+}
+struct User: Hashable {
+    var name: String
+    var avatar: String
+    var isCurrentUser: Bool = false
+}
