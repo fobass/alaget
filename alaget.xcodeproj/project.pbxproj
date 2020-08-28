@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C33E72724F2A14700F69D09 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 7C33E72624F2A14700F69D09 /* FacebookLogin */; };
-		7C33E72924F2A14700F69D09 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 7C33E72824F2A14700F69D09 /* FacebookShare */; };
-		7C33E72B24F2A14700F69D09 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7C33E72A24F2A14700F69D09 /* FacebookCore */; };
 		7C39601724E83EEE00E6B3D7 /* alagetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C39601624E83EEE00E6B3D7 /* alagetApp.swift */; };
 		7C39601B24E83EF200E6B3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C39601A24E83EF200E6B3D7 /* Assets.xcassets */; };
 		7C39601E24E83EF200E6B3D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C39601D24E83EF200E6B3D7 /* Preview Assets.xcassets */; };
@@ -34,6 +31,8 @@
 		7C54CDAB24F15B19000523E7 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54CDAA24F15B19000523E7 /* KeyboardResponder.swift */; };
 		7CB0A8CA24F40D2E005354FE /* Pods_alaget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAE28763BC4450FC163E790 /* Pods_alaget.framework */; };
 		7CB0A8CB24F40D2E005354FE /* Pods_alaget.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAE28763BC4450FC163E790 /* Pods_alaget.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7CB0A8CE24F95DDC005354FE /* Login.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8CD24F95DDC005354FE /* Login.View.swift */; };
+		7CB0A8D124F964AB005354FE /* Trip.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8D024F964AB005354FE /* Trip.View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +75,8 @@
 		7C54CDA524EEB36B000523E7 /* Inbox.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.ViewModel.swift; sourceTree = "<group>"; };
 		7C54CDA724EEBDC9000523E7 /* Inbox.Detail.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inbox.Detail.View.swift; sourceTree = "<group>"; };
 		7C54CDAA24F15B19000523E7 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		7CB0A8CD24F95DDC005354FE /* Login.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.View.swift; sourceTree = "<group>"; };
+		7CB0A8D024F964AB005354FE /* Trip.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.View.swift; sourceTree = "<group>"; };
 		B69D5B8CD25C22040E50DDFF /* Pods-alaget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alaget.debug.xcconfig"; path = "Target Support Files/Pods-alaget/Pods-alaget.debug.xcconfig"; sourceTree = "<group>"; };
 		C2C9076E3C9ED2F47F157779 /* Pods-alaget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alaget.release.xcconfig"; path = "Target Support Files/Pods-alaget/Pods-alaget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,11 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C33E72724F2A14700F69D09 /* FacebookLogin in Frameworks */,
 				7C39604624E9145200E6B3D7 /* SDWebImageSwiftUI in Frameworks */,
-				7C33E72924F2A14700F69D09 /* FacebookShare in Frameworks */,
 				7CB0A8CA24F40D2E005354FE /* Pods_alaget.framework in Frameworks */,
-				7C33E72B24F2A14700F69D09 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,15 +159,16 @@
 		7C39602524E83F1E00E6B3D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7CB0A8CF24F9647F005354FE /* TripView */,
 				7C39602824E8460200E6B3D7 /* ContentView.swift */,
-				7C54CD9A24EEB169000523E7 /* Message */,
-				7C39603224E85AE000E6B3D7 /* Profile */,
-				7C39602724E83FC300E6B3D7 /* Explorer */,
+				7C54CD9A24EEB169000523E7 /* MessageView */,
+				7C39603224E85AE000E6B3D7 /* ProfileView */,
+				7C39602724E83FC300E6B3D7 /* ExplorerView */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		7C39602724E83FC300E6B3D7 /* Explorer */ = {
+		7C39602724E83FC300E6B3D7 /* ExplorerView */ = {
 			isa = PBXGroup;
 			children = (
 				7C39602A24E8461800E6B3D7 /* Explorer.View.swift */,
@@ -177,7 +176,7 @@
 				7C39604724E9417400E6B3D7 /* Explorer.List.View.swift */,
 				7C54CD9224EAB601000523E7 /* Explorer.Detail.View.swift */,
 			);
-			path = Explorer;
+			path = ExplorerView;
 			sourceTree = "<group>";
 		};
 		7C39602C24E848F600E6B3D7 /* Extentions */ = {
@@ -188,20 +187,22 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
-		7C39603224E85AE000E6B3D7 /* Profile */ = {
+		7C39603224E85AE000E6B3D7 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
 				7C4687D424F403A700A655E1 /* Profile.View.swift */,
+				7CB0A8CD24F95DDC005354FE /* Login.View.swift */,
 			);
-			path = Profile;
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 		7C39603724E90B8D00E6B3D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C54CD9F24EEB209000523E7 /* Inbox */,
-				7C54CD9424EAB96E000523E7 /* Profile */,
-				7C39603924E90BC400E6B3D7 /* Explorer */,
+				7CB0A8D224F9670F005354FE /* TripModel */,
+				7C54CD9F24EEB209000523E7 /* InboxModel */,
+				7C54CD9424EAB96E000523E7 /* ProfileModel */,
+				7C39603924E90BC400E6B3D7 /* ExplorerModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,68 +210,68 @@
 		7C39603824E90B9800E6B3D7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7C54CDA224EEB305000523E7 /* Inbox */,
-				7C54CD9724EAB9B8000523E7 /* Profile */,
-				7C39603C24E90D7500E6B3D7 /* Explorer */,
+				7C54CDA224EEB305000523E7 /* InboxViewModel */,
+				7C54CD9724EAB9B8000523E7 /* ProfileViewModel */,
+				7C39603C24E90D7500E6B3D7 /* ExplorerViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		7C39603924E90BC400E6B3D7 /* Explorer */ = {
+		7C39603924E90BC400E6B3D7 /* ExplorerModel */ = {
 			isa = PBXGroup;
 			children = (
 				7C39603A24E90BDD00E6B3D7 /* Explorer.Model.swift */,
 			);
-			path = Explorer;
+			path = ExplorerModel;
 			sourceTree = "<group>";
 		};
-		7C39603C24E90D7500E6B3D7 /* Explorer */ = {
+		7C39603C24E90D7500E6B3D7 /* ExplorerViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				7C39603D24E90DA300E6B3D7 /* Explorer.ViewModel.swift */,
 			);
-			path = Explorer;
+			path = ExplorerViewModel;
 			sourceTree = "<group>";
 		};
-		7C54CD9424EAB96E000523E7 /* Profile */ = {
+		7C54CD9424EAB96E000523E7 /* ProfileModel */ = {
 			isa = PBXGroup;
 			children = (
 				7C54CD9524EAB97C000523E7 /* Profile.Model.swift */,
 			);
-			path = Profile;
+			path = ProfileModel;
 			sourceTree = "<group>";
 		};
-		7C54CD9724EAB9B8000523E7 /* Profile */ = {
+		7C54CD9724EAB9B8000523E7 /* ProfileViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				7C54CD9824EAB9CF000523E7 /* Profile.ViewModel.swift */,
 			);
-			path = Profile;
+			path = ProfileViewModel;
 			sourceTree = "<group>";
 		};
-		7C54CD9A24EEB169000523E7 /* Message */ = {
+		7C54CD9A24EEB169000523E7 /* MessageView */ = {
 			isa = PBXGroup;
 			children = (
 				7C54CD9D24EEB199000523E7 /* Indox.View.swift */,
 				7C54CDA724EEBDC9000523E7 /* Inbox.Detail.View.swift */,
 			);
-			path = Message;
+			path = MessageView;
 			sourceTree = "<group>";
 		};
-		7C54CD9F24EEB209000523E7 /* Inbox */ = {
+		7C54CD9F24EEB209000523E7 /* InboxModel */ = {
 			isa = PBXGroup;
 			children = (
 				7C54CDA024EEB21D000523E7 /* Inbox.Model.swift */,
 			);
-			path = Inbox;
+			path = InboxModel;
 			sourceTree = "<group>";
 		};
-		7C54CDA224EEB305000523E7 /* Inbox */ = {
+		7C54CDA224EEB305000523E7 /* InboxViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				7C54CDA524EEB36B000523E7 /* Inbox.ViewModel.swift */,
 			);
-			path = Inbox;
+			path = InboxViewModel;
 			sourceTree = "<group>";
 		};
 		7C54CDA924F15B07000523E7 /* Helper */ = {
@@ -279,6 +280,21 @@
 				7C54CDAA24F15B19000523E7 /* KeyboardResponder.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		7CB0A8CF24F9647F005354FE /* TripView */ = {
+			isa = PBXGroup;
+			children = (
+				7CB0A8D024F964AB005354FE /* Trip.View.swift */,
+			);
+			path = TripView;
+			sourceTree = "<group>";
+		};
+		7CB0A8D224F9670F005354FE /* TripModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TripModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,9 +319,6 @@
 			name = alaget;
 			packageProductDependencies = (
 				7C39604524E9145200E6B3D7 /* SDWebImageSwiftUI */,
-				7C33E72624F2A14700F69D09 /* FacebookLogin */,
-				7C33E72824F2A14700F69D09 /* FacebookShare */,
-				7C33E72A24F2A14700F69D09 /* FacebookCore */,
 			);
 			productName = alaget;
 			productReference = 7C39601324E83EEE00E6B3D7 /* alaget.app */;
@@ -436,9 +449,11 @@
 				7C54CD9E24EEB199000523E7 /* Indox.View.swift in Sources */,
 				7C39602924E8460200E6B3D7 /* ContentView.swift in Sources */,
 				7C39602E24E8490C00E6B3D7 /* Extentions.swift in Sources */,
+				7CB0A8CE24F95DDC005354FE /* Login.View.swift in Sources */,
 				7C39601724E83EEE00E6B3D7 /* alagetApp.swift in Sources */,
 				7C4687D524F403A700A655E1 /* Profile.View.swift in Sources */,
 				7C54CDA824EEBDC9000523E7 /* Inbox.Detail.View.swift in Sources */,
+				7CB0A8D124F964AB005354FE /* Trip.View.swift in Sources */,
 				7C39603B24E90BDD00E6B3D7 /* Explorer.Model.swift in Sources */,
 				7C54CDA624EEB36B000523E7 /* Inbox.ViewModel.swift in Sources */,
 				7C39603E24E90DA300E6B3D7 /* Explorer.ViewModel.swift in Sources */,
@@ -655,21 +670,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7C33E72624F2A14700F69D09 /* FacebookLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7C33E72524F2A14700F69D09 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookLogin;
-		};
-		7C33E72824F2A14700F69D09 /* FacebookShare */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7C33E72524F2A14700F69D09 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookShare;
-		};
-		7C33E72A24F2A14700F69D09 /* FacebookCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7C33E72524F2A14700F69D09 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookCore;
-		};
 		7C39604524E9145200E6B3D7 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7C39604424E9145200E6B3D7 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
