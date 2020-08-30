@@ -33,6 +33,18 @@
 		7CB0A8CB24F40D2E005354FE /* Pods_alaget.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AAE28763BC4450FC163E790 /* Pods_alaget.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7CB0A8CE24F95DDC005354FE /* Login.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8CD24F95DDC005354FE /* Login.View.swift */; };
 		7CB0A8D124F964AB005354FE /* Trip.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8D024F964AB005354FE /* Trip.View.swift */; };
+		7CB0A8D524F967A7005354FE /* Trip.Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8D424F967A7005354FE /* Trip.Model.swift */; };
+		7CB0A8D724F969D6005354FE /* Trip.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8D624F969D6005354FE /* Trip.ViewModel.swift */; };
+		7CB0A8D924FA1575005354FE /* New.Trip.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8D824FA1575005354FE /* New.Trip.View.swift */; };
+		7CB0A8E124FA9283005354FE /* RKCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8DA24FA9283005354FE /* RKCell.swift */; };
+		7CB0A8E224FA9283005354FE /* RKDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8DB24FA9283005354FE /* RKDate.swift */; };
+		7CB0A8E324FA9283005354FE /* RKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8DC24FA9283005354FE /* RKViewController.swift */; };
+		7CB0A8E424FA9283005354FE /* RKMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8DD24FA9283005354FE /* RKMonth.swift */; };
+		7CB0A8E524FA9283005354FE /* RKColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8DE24FA9283005354FE /* RKColorSettings.swift */; };
+		7CB0A8E624FA9283005354FE /* RKWeekdayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8DF24FA9283005354FE /* RKWeekdayHeader.swift */; };
+		7CB0A8E724FA9283005354FE /* RKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8E024FA9283005354FE /* RKManager.swift */; };
+		7CB0A8E924FAD102005354FE /* Edit.Trip.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8E824FAD102005354FE /* Edit.Trip.View.swift */; };
+		7CB0A8EC24FB6B19005354FE /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0A8EA24FB6B19005354FE /* DataBase.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -77,6 +89,18 @@
 		7C54CDAA24F15B19000523E7 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		7CB0A8CD24F95DDC005354FE /* Login.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.View.swift; sourceTree = "<group>"; };
 		7CB0A8D024F964AB005354FE /* Trip.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.View.swift; sourceTree = "<group>"; };
+		7CB0A8D424F967A7005354FE /* Trip.Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.Model.swift; sourceTree = "<group>"; };
+		7CB0A8D624F969D6005354FE /* Trip.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.ViewModel.swift; sourceTree = "<group>"; };
+		7CB0A8D824FA1575005354FE /* New.Trip.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.Trip.View.swift; sourceTree = "<group>"; };
+		7CB0A8DA24FA9283005354FE /* RKCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKCell.swift; sourceTree = "<group>"; };
+		7CB0A8DB24FA9283005354FE /* RKDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKDate.swift; sourceTree = "<group>"; };
+		7CB0A8DC24FA9283005354FE /* RKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKViewController.swift; sourceTree = "<group>"; };
+		7CB0A8DD24FA9283005354FE /* RKMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKMonth.swift; sourceTree = "<group>"; };
+		7CB0A8DE24FA9283005354FE /* RKColorSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKColorSettings.swift; sourceTree = "<group>"; };
+		7CB0A8DF24FA9283005354FE /* RKWeekdayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKWeekdayHeader.swift; sourceTree = "<group>"; };
+		7CB0A8E024FA9283005354FE /* RKManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKManager.swift; sourceTree = "<group>"; };
+		7CB0A8E824FAD102005354FE /* Edit.Trip.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edit.Trip.View.swift; sourceTree = "<group>"; };
+		7CB0A8EB24FB6B19005354FE /* DataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataBase.xcdatamodel; sourceTree = "<group>"; };
 		B69D5B8CD25C22040E50DDFF /* Pods-alaget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alaget.debug.xcconfig"; path = "Target Support Files/Pods-alaget/Pods-alaget.debug.xcconfig"; sourceTree = "<group>"; };
 		C2C9076E3C9ED2F47F157779 /* Pods-alaget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alaget.release.xcconfig"; path = "Target Support Files/Pods-alaget/Pods-alaget.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +163,7 @@
 				7C39603724E90B8D00E6B3D7 /* Model */,
 				7C39602524E83F1E00E6B3D7 /* View */,
 				7C39601624E83EEE00E6B3D7 /* alagetApp.swift */,
+				7C39602824E8460200E6B3D7 /* ContentView.swift */,
 				7C39602F24E84AD500E6B3D7 /* Main.View.swift */,
 				7C39601A24E83EF200E6B3D7 /* Assets.xcassets */,
 				7C39601F24E83EF200E6B3D7 /* Info.plist */,
@@ -160,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				7CB0A8CF24F9647F005354FE /* TripView */,
-				7C39602824E8460200E6B3D7 /* ContentView.swift */,
 				7C54CD9A24EEB169000523E7 /* MessageView */,
 				7C39603224E85AE000E6B3D7 /* ProfileView */,
 				7C39602724E83FC300E6B3D7 /* ExplorerView */,
@@ -199,10 +223,11 @@
 		7C39603724E90B8D00E6B3D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7CB0A8D224F9670F005354FE /* TripModel */,
-				7C54CD9F24EEB209000523E7 /* InboxModel */,
-				7C54CD9424EAB96E000523E7 /* ProfileModel */,
-				7C39603924E90BC400E6B3D7 /* ExplorerModel */,
+				7CB0A8EA24FB6B19005354FE /* DataBase.xcdatamodeld */,
+				7C39603A24E90BDD00E6B3D7 /* Explorer.Model.swift */,
+				7C54CD9524EAB97C000523E7 /* Profile.Model.swift */,
+				7C54CDA024EEB21D000523E7 /* Inbox.Model.swift */,
+				7CB0A8D424F967A7005354FE /* Trip.Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,43 +235,12 @@
 		7C39603824E90B9800E6B3D7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7C54CDA224EEB305000523E7 /* InboxViewModel */,
-				7C54CD9724EAB9B8000523E7 /* ProfileViewModel */,
-				7C39603C24E90D7500E6B3D7 /* ExplorerViewModel */,
+				7C39603D24E90DA300E6B3D7 /* Explorer.ViewModel.swift */,
+				7C54CD9824EAB9CF000523E7 /* Profile.ViewModel.swift */,
+				7C54CDA524EEB36B000523E7 /* Inbox.ViewModel.swift */,
+				7CB0A8D624F969D6005354FE /* Trip.ViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		7C39603924E90BC400E6B3D7 /* ExplorerModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C39603A24E90BDD00E6B3D7 /* Explorer.Model.swift */,
-			);
-			path = ExplorerModel;
-			sourceTree = "<group>";
-		};
-		7C39603C24E90D7500E6B3D7 /* ExplorerViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C39603D24E90DA300E6B3D7 /* Explorer.ViewModel.swift */,
-			);
-			path = ExplorerViewModel;
-			sourceTree = "<group>";
-		};
-		7C54CD9424EAB96E000523E7 /* ProfileModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C54CD9524EAB97C000523E7 /* Profile.Model.swift */,
-			);
-			path = ProfileModel;
-			sourceTree = "<group>";
-		};
-		7C54CD9724EAB9B8000523E7 /* ProfileViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C54CD9824EAB9CF000523E7 /* Profile.ViewModel.swift */,
-			);
-			path = ProfileViewModel;
 			sourceTree = "<group>";
 		};
 		7C54CD9A24EEB169000523E7 /* MessageView */ = {
@@ -258,25 +252,16 @@
 			path = MessageView;
 			sourceTree = "<group>";
 		};
-		7C54CD9F24EEB209000523E7 /* InboxModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C54CDA024EEB21D000523E7 /* Inbox.Model.swift */,
-			);
-			path = InboxModel;
-			sourceTree = "<group>";
-		};
-		7C54CDA224EEB305000523E7 /* InboxViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7C54CDA524EEB36B000523E7 /* Inbox.ViewModel.swift */,
-			);
-			path = InboxViewModel;
-			sourceTree = "<group>";
-		};
 		7C54CDA924F15B07000523E7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				7CB0A8DA24FA9283005354FE /* RKCell.swift */,
+				7CB0A8DE24FA9283005354FE /* RKColorSettings.swift */,
+				7CB0A8DB24FA9283005354FE /* RKDate.swift */,
+				7CB0A8E024FA9283005354FE /* RKManager.swift */,
+				7CB0A8DD24FA9283005354FE /* RKMonth.swift */,
+				7CB0A8DC24FA9283005354FE /* RKViewController.swift */,
+				7CB0A8DF24FA9283005354FE /* RKWeekdayHeader.swift */,
 				7C54CDAA24F15B19000523E7 /* KeyboardResponder.swift */,
 			);
 			path = Helper;
@@ -286,15 +271,10 @@
 			isa = PBXGroup;
 			children = (
 				7CB0A8D024F964AB005354FE /* Trip.View.swift */,
+				7CB0A8D824FA1575005354FE /* New.Trip.View.swift */,
+				7CB0A8E824FAD102005354FE /* Edit.Trip.View.swift */,
 			);
 			path = TripView;
-			sourceTree = "<group>";
-		};
-		7CB0A8D224F9670F005354FE /* TripModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TripModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,21 +421,33 @@
 				7C54CD9624EAB97C000523E7 /* Profile.Model.swift in Sources */,
 				7C39602B24E8461800E6B3D7 /* Explorer.View.swift in Sources */,
 				7C4687D724F405FD00A655E1 /* env.swift in Sources */,
+				7CB0A8E724FA9283005354FE /* RKManager.swift in Sources */,
+				7CB0A8D724F969D6005354FE /* Trip.ViewModel.swift in Sources */,
+				7CB0A8D924FA1575005354FE /* New.Trip.View.swift in Sources */,
+				7CB0A8E324FA9283005354FE /* RKViewController.swift in Sources */,
 				7C54CDA124EEB21D000523E7 /* Inbox.Model.swift in Sources */,
 				7C54CD9924EAB9CF000523E7 /* Profile.ViewModel.swift in Sources */,
+				7CB0A8E924FAD102005354FE /* Edit.Trip.View.swift in Sources */,
 				7C39603024E84AD500E6B3D7 /* Main.View.swift in Sources */,
 				7C39603624E9009B00E6B3D7 /* Search.View.swift in Sources */,
+				7CB0A8D524F967A7005354FE /* Trip.Model.swift in Sources */,
 				7C39604824E9417400E6B3D7 /* Explorer.List.View.swift in Sources */,
 				7C54CD9E24EEB199000523E7 /* Indox.View.swift in Sources */,
 				7C39602924E8460200E6B3D7 /* ContentView.swift in Sources */,
 				7C39602E24E8490C00E6B3D7 /* Extentions.swift in Sources */,
+				7CB0A8E224FA9283005354FE /* RKDate.swift in Sources */,
+				7CB0A8EC24FB6B19005354FE /* DataBase.xcdatamodeld in Sources */,
 				7CB0A8CE24F95DDC005354FE /* Login.View.swift in Sources */,
 				7C39601724E83EEE00E6B3D7 /* alagetApp.swift in Sources */,
+				7CB0A8E624FA9283005354FE /* RKWeekdayHeader.swift in Sources */,
 				7C4687D524F403A700A655E1 /* Profile.View.swift in Sources */,
 				7C54CDA824EEBDC9000523E7 /* Inbox.Detail.View.swift in Sources */,
 				7CB0A8D124F964AB005354FE /* Trip.View.swift in Sources */,
+				7CB0A8E424FA9283005354FE /* RKMonth.swift in Sources */,
+				7CB0A8E124FA9283005354FE /* RKCell.swift in Sources */,
 				7C39603B24E90BDD00E6B3D7 /* Explorer.Model.swift in Sources */,
 				7C54CDA624EEB36B000523E7 /* Inbox.ViewModel.swift in Sources */,
+				7CB0A8E524FA9283005354FE /* RKColorSettings.swift in Sources */,
 				7C39603E24E90DA300E6B3D7 /* Explorer.ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +668,19 @@
 			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7CB0A8EA24FB6B19005354FE /* DataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7CB0A8EB24FB6B19005354FE /* DataBase.xcdatamodel */,
+			);
+			currentVersion = 7CB0A8EB24FB6B19005354FE /* DataBase.xcdatamodel */;
+			path = DataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C39600B24E83EEE00E6B3D7 /* Project object */;
 }

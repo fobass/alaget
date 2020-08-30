@@ -17,8 +17,8 @@ struct Main_View: View {
         VStack{
             if (userStore.isLogin){
                 ContentView()
-                    .animation(.easeInOut)
-                    .transition(.move(edge: .trailing))
+//                    .animation(.easeInOut)
+//                    .transition(.move(edge: .trailing))
             } else {
                 Login_View().environmentObject(auth)
                     .animation(.easeInOut)

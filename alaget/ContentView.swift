@@ -38,7 +38,16 @@ struct ContentView: View {
                         .imageScale(.large)
                     Text("INDOX")
                 }
-                .tag(0)
+                .tag(1)
+                
+                Trip_View().tabItem {
+                    Image(systemName: "globe")
+                        .resizable()
+                      .imageScale(.large)
+                    Text("TREVEL LIST")
+//                    Spacer()
+                }
+                .tag(2)
             }
             
         }
