@@ -7,16 +7,25 @@
 
 import Foundation
 
+struct Setting: Identifiable {
+    var id = UUID()
+    var title: String
+    var icon : String
+    var type : Int
+}
+
 struct Profile {
-    let uuid: String
+    var uuid: String
     var firstName, lastName, pwd: String
     var gender: Int
-    var phoneNumber, dateOfBirth, email: String
+    var phoneNumber, email: String
+    var dateOfBirth: Date
     var photoURL: String
     var emergencyContact: Int
     var isActive, isVerified: Bool
     var verifiedDocID: Int
-    var about, dateJoined: String
+    var about: String
+    var dateJoined: Date
     var score: Int
     var lat, lon: Double
     var commentsID: Int

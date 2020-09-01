@@ -14,9 +14,11 @@ import SwiftUI
 final class TripStore: ObservableObject {
     @Published var trips: [Trip] = []
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+    @Published var selectedItem: Trip?
+    @Published var isChaged: Bool = false
     init() {
         self.trips = [
+            Trip.init(userID: "asd", country: "asd", city: "asd", code: "sdf", remark: "sdf", lastUpdate: "wqe", image: "asd", lat: 0, lon: 0, distance: 0, tripGrpKey: "asd"),
             Trip.init(userID: "asd", country: "asd", city: "asd", code: "sdf", remark: "sdf", lastUpdate: "wqe", image: "asd", lat: 0, lon: 0, distance: 0, tripGrpKey: "asd")
         ]
         load()

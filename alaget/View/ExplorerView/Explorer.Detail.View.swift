@@ -18,7 +18,7 @@ struct Explorer_Detail_View: View {
     @State var isMessageScreen: Bool = false
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme: ColorScheme
-    @ObservedObject var store = ProfileStore()
+    @ObservedObject var store = SettingsStore()
     @ObservedObject var store1 = ExplorerStore()
     var body: some View {
         VStack{
@@ -46,13 +46,13 @@ struct Explorer_Detail_View: View {
             VStack{
                 HStack{
                     VStack(alignment: .leading, spacing: 5){
-                        Text(store.profile!.DisplayGreetingName)
+                        Text(store.profile.DisplayGreetingName)
                             .font(.system(size: 22))
                             .fontWeight(.bold)
                             //                                .foregroundColor(Color.backgroundColor(for: self.colorScheme))
                             .padding(EdgeInsets.init(top: 20, leading: 0, bottom: 10, trailing: 5))
                         HStack{
-                            Text("About me " + store.profile!.about)
+                            Text("About me " + store.profile.about)
                                 .font(.footnote)
                             //                                    .foregroundColor(Color.backgroundColor(for: self.colorScheme))
                         }
@@ -71,7 +71,7 @@ struct Explorer_Detail_View: View {
                     }
                     Spacer()
                     VStack(){
-                        WebImage(url: URL(string: store.profile!.photoURL))
+                        WebImage(url: URL(string: store.profile.photoURL))
                             .resizable()
                             .frame(width: 80, height: 80, alignment: .center)
                             .clipShape(Circle())
@@ -81,7 +81,7 @@ struct Explorer_Detail_View: View {
                                 .frame(width: 16, height: 16)
                                 .foregroundColor(Color.orange.opacity(0.5))
                             
-                            Text(String(store.profile!.score))
+                            Text(String(store.profile.score))
                                 .fontWeight(.bold)
                                 .font(.footnote)
                                 .foregroundColor(Color.orange.opacity(0.5))
@@ -185,8 +185,9 @@ struct Explorer_Detail_View: View {
                 }
                 .frame(height: 180, alignment: .center)
                 .background(Color.itemBackgroundColor(for: self.colorScheme))
+                
                 .cornerRadius(5)
-                .shadow(color: Color.gray.opacity(0.4), radius: 2)
+                .shadow(color: Color.gray.opacity(0.3), radius: 3)
                 .buttonStyle(ScaleButtonStyle())
                 
                 
@@ -203,7 +204,7 @@ struct Explorer_Detail_View: View {
     }
     
     func isVerifiedColor() -> Color {
-        return ((store.profile?.isVerified)!) ? Color.gray.opacity(0.7) : Color.blue.opacity(0.7)
+        return ((store.profile.isVerified)) ? Color.gray.opacity(0.7) : Color.blue.opacity(0.7)
     }
 }
 
@@ -275,7 +276,7 @@ struct ProfileUpcomingFlyCell: View {
                         .frame(width: 160, height: 150, alignment: .center)
                         .background(Color.itemBackgroundColor(for: self.colorScheme))
                         .cornerRadius(5)
-                        .shadow(color: Color.gray.opacity(0.5), radius: 1)
+                        .shadow(color: Color.gray.opacity(0.3), radius: 3)
                         .buttonStyle(ScaleButtonStyle())
                     }
                 }

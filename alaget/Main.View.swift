@@ -11,12 +11,20 @@
 import SwiftUI
 
 struct Main_View: View {
-    @EnvironmentObject var auth : ProfileStore
+    @EnvironmentObject var auth : SettingsStore
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     var body: some View {
         VStack{
+            
             if (userStore.isLogin){
-                ContentView()
+                
+                if (!userStore.IsEnabledLocation) {
+                    LocationView().environmentObject(userStore)
+                        .animation(.easeInOut)
+                        .transition(.move(edge: .top))
+                } else {
+                    ContentView()
+                }
 //                    .animation(.easeInOut)
 //                    .transition(.move(edge: .trailing))
             } else {

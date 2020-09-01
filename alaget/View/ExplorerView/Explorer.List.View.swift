@@ -17,7 +17,7 @@ struct Explorer_List_View: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     var body: some View {
-        NavigationView {
+        VStack {
                 ScrollView(){
                     VStack{
                         ForEach(explorer.members){ item in
@@ -90,22 +90,22 @@ struct Explorer_List_View: View {
 //                .navigationBarItems(leading: <#T##View#>, trailing: <#T##View#>)
                 
                         
-                .navigationBarItems(
-                leading:
-                   Text("")
-                ,trailing: Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }, label: {
-                    Image(systemName: "xmark.circle")
-                        .font(.custom("ArialRoundedMTBold", size: 30))
-                        .foregroundColor(Color.red.opacity(0.7))
-                })
-                .background(Color.itemBackgroundColor(for: self.colorScheme))
-                .cornerRadius(30)
-                .shadow(color: Color.red.opacity(0.3),  radius: 1)
-                )
+//                .navigationBarItems(
+//                leading:
+//                   Text("")
+//                ,trailing: Button(action: {
+//                    self.presentationMode.wrappedValue.dismiss()
+//                }, label: {
+//                    Image(systemName: "xmark.circle")
+//                        .font(.custom("ArialRoundedMTBold", size: 30))
+//                        .foregroundColor(Color.red.opacity(0.7))
+//                })
+//                .background(Color.itemBackgroundColor(for: self.colorScheme))
+//                .cornerRadius(30)
+//                .shadow(color: Color.red.opacity(0.3),  radius: 1)
+//                )
                 
-                .navigationBarTitle(explorer.country, displayMode: .large)
+                .navigationBarTitle(explorer.country, displayMode: .inline)
             
         }
     }

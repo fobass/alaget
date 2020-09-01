@@ -28,7 +28,7 @@ struct ContentView: View {
                     Image(systemName: (selection == 0) ? "magnifyingglass" : "magnifyingglass")
                         .resizable()
                         .imageScale(.large)
-                    Text("EXPLOER")
+                    Text("DEPARTURES")
                 }
                 .tag(0)
                 
@@ -48,6 +48,15 @@ struct ContentView: View {
 //                    Spacer()
                 }
                 .tag(2)
+                
+                Settings_View().environmentObject(userStore)
+                    .tabItem {
+                    Image(systemName: "gear")
+                        .resizable()
+                      .imageScale(.large)
+                    Text("SETTINGS")
+                }
+                .tag(3)
             }
             
         }

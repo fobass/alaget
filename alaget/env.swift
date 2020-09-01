@@ -7,4 +7,4 @@
 
 import Foundation
 
-var userStore = ProfileStore()
+var userStore = SettingsStore()

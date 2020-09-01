@@ -101,7 +101,7 @@ class AppleSignUpCoordinator: NSObject, ASAuthorizationControllerDelegate, ASAut
 class GoogleStuff: UIViewController, GIDSignInDelegate, ObservableObject {
 
     var googleSignIn = GIDSignIn.sharedInstance()
-    @ObservedObject var auth = ProfileStore()
+//    @ObservedObject var auth = SettingsStore()
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
@@ -146,31 +146,29 @@ class GoogleStuff: UIViewController, GIDSignInDelegate, ObservableObject {
                              */
 
                             DispatchQueue.main.async {
+                                let firstName = (userData!["given_name"] as! String?) ?? ""
+                                let lastName = (userData!["family_name"] as! String?) ?? ""
+                                let phoneNumber = (userData!["phoneNumber"] as! String?) ?? "-"
+                                let photoURL = ((userData!["picture"] as! String?) ?? "") + "?type=large"
+                                let email = ((userData!["email"] as! String?) ?? "")
+                                var _ = (userData!["email_verified"] as! Bool?) ?? false
+                                var _ = (userData!["locale"] as! String?) ?? ""
+                                let gender = (userData!["gender"] as! String?) ?? ""
+                                var genderId : Int = 3
                                 
-                            
-//                            userStore.profile?.firstName = (userData!["name"] as! String?) ?? ""
-                            userStore.profile?.firstName = (userData!["given_name"] as! String?) ?? ""
-                            userStore.profile?.lastName = (userData!["family_name"] as! String?) ?? ""
-                            userStore.profile?.phoneNumber = (userData!["phoneNumber"] as! String?) ?? "-"
-                            userStore.profile?.photoURL = ((userData!["picture"] as! String?) ?? "") + "?type=large"
-                            userStore.profile?.email = ((userData!["email"] as! String?) ?? "")
-                            var _ = (userData!["email_verified"] as! Bool?) ?? false
-                            var _ = (userData!["locale"] as! String?) ?? ""
-                            let gender = (userData!["gender"] as! String?) ?? ""
-
-
-                            if (gender == "") {
                                 if (gender == "male") {
-                                    userStore.profile?.gender = 1
+                                    genderId = 1
                                 } else if (gender == "female") {
-                                    userStore.profile?.gender = 2
-                                } else {
-                                    userStore.profile?.gender = 3
+                                    genderId = 2
                                 }
+                                
+                                let profile = Profile.init(uuid: user.userID, firstName: firstName, lastName: lastName, pwd: "", gender: genderId, phoneNumber: phoneNumber, email: email, dateOfBirth: Date(), photoURL: photoURL, emergencyContact: 0, isActive: true, isVerified: false, verifiedDocID: 0, about: "", dateJoined: Date(), score: 0, lat: 0, lon: 0, commentsID: 0)
+                                
+                                userStore.insert(profile: profile, completionHandler:{ success, error  in
+                                    userStore.isLogin = success
+                                })
+                                
                             }
-                            
-                            userStore.isLogin = true
-                        }
 
                         } catch {
                             NSLog("Account Information could not be loaded")
@@ -223,10 +221,9 @@ struct Login_View: View {
     @State var isPresented: Bool = false
     let googleSignIn = GIDSignIn.sharedInstance()
     @ObservedObject var myGoogle = GoogleStuff()
-    @EnvironmentObject var auth: ProfileStore
+    @EnvironmentObject var auth: SettingsStore
     @State var attempts: Int = 0
     @State var selection: Int = 0
-//    @State var timer = Timer.publish (every: 1, on: .current, in: .common).autoconnect()
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     var body: some View {
 //        NavigationView{
@@ -411,7 +408,8 @@ struct Login_View: View {
                                         switch authResults.credential {
                                         case let appleIDCredential as ASAuthorizationAppleIDCredential:
                                             let _ = appleIDCredential.user
-                                            auth.isLogin = true
+       
+                                            auth.login()
                                             //                                                let fullName = appleIDCredential.fullName
                                             //                                                let email = appleIDCredential.email
                                             //                                                let defaults = UserDefaults.standard
