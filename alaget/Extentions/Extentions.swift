@@ -9,6 +9,23 @@ import Foundation
 import UIKit
 import SwiftUI
 
+func DateToStr(date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    formatter.dateFormat = "YYYY-MM-dd 00:00:00"
+    return formatter.string(from: date)
+}
+
+func StrToDate(str: String) -> Date {
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    if let date = dateFormatter.date(from: str) {
+        return date
+    } 
+    return Date()
+}
+
 struct ImagePicker: UIViewControllerRepresentable {
     
     @Environment(\.presentationMode)

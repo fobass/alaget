@@ -49,7 +49,7 @@ struct TripViewCell: View {
                         .fontWeight(.black)
                         .foregroundColor(Color.white.opacity(0.6))
                     Spacer()
-                    Text(item.lastUpdate)
+                    Text(item.lastupdate)
                         .font(.system(size: 7))
                         .fontWeight(.black)
                         .foregroundColor(Color.gray.opacity(0.9))
@@ -72,7 +72,7 @@ struct Trip_View: View {
     @State private var addAction: Bool = false
     @State private var editAction: Bool = false
     private var columns = [GridItem(.flexible())]
-    @ObservedObject var store = TripStore()
+    @EnvironmentObject var store : TripStore
     var body: some View {
         NavigationView{
             ScrollView{
@@ -96,12 +96,28 @@ struct Trip_View: View {
                         }
                     }
                     .buttonStyle(ScaleButtonStyle())
-                    .fullScreenCover(isPresented: $editAction){
-                        Edit_Trip_View(trip: self.store.selectedItem!)
-                    }
+//                    .fullScreenCover(isPresented: $editAction){
+//                        Edit_Trip_View(trip: self.store.selectedItem!)
+//                    }
                 }
             }
-            .navigationBarItems(trailing:
+            .navigationBarItems(
+                leading:
+                    VStack {
+                        Button(action: {
+                            self.store.deleteAllData()
+                        }) {
+                           Image(systemName: "plus.square.fill")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                           
+                        }
+                        .foregroundColor(Color.red.opacity(0.7))
+                    }
+                    
+                
+                ,
+                trailing:
                 VStack {
                     Button(action: {
                         self.addAction.toggle()

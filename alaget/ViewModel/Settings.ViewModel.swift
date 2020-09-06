@@ -156,39 +156,42 @@ final class SettingsStore: ObservableObject {
     
         load()
         
-        completionHandler(true, "")
+//        completionHandler(true, "")
         
         
         
         
-//        let profileUpdateData: [String: Any] = ["uuID": profile.uuID, "firstName": profile.firstName, "lastName": profile.lastName, "pwd": "google_auth", "gender": profile.gender, "phoneNumber": profile.phoneNumber, "dateOfBirth": profile.dateOfBirth, "email": profile.email, "photoURL": profile.photoURL, "emergencyContact": profile.emergencyContact, "isActive": profile.isActive, "isVerified": profile.isVerified, "verifiedDocID": profile.verifiedDocID, "about": profile.about, "dateJoined": profile.dateJoined, "score": profile.score, "lat": (locationManager.location?.coordinate.latitude ?? 0.0), "lon": (locationManager.location?.coordinate.longitude ?? 0.0), "commentsID": profile.commentsID]
-//
-//        if let uri = URL(string: URL_PROFILE_API_END_POINT + "/" + profile.uuID){
-//            var request = URLRequest(url: uri)
-//            do {
-//                let jsonData = try JSONSerialization.data(withJSONObject: profileUpdateData, options: .prettyPrinted)
-//                request.httpBody = jsonData
-//                request.httpMethod = "PUT"
-//                print(jsonData)
-//            } catch let e {
-//                print(e)
-//            }
-//
-//            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//            session.dataTask(with: request) { jsonData, res, err in
-//                if let data = jsonData {
-//                    if let profile = try? JSONDecoder().decode(ProfileModel.self, from: data){
-//                        DispatchQueue.main.sync(execute: {
-//                            self.profile.removeAll()
-//                            self.profile.append(profile)
-//                            self.progressDocCheck(profile: profile)
-//                            completionHandler(true, "")
-//                            self.fetchLocation(profile: profile)
-//                        })
-//                    }
-//                }
-//            }.resume()
-//        }
+        let profileData: [String: Any] = ["uuid": profile.uuid, "firstName": profile.firstName, "lastName": profile.lastName, "pwd": "google_auth", "gender": profile.gender, "phoneNumber": profile.phoneNumber, "dateOfBirth": profile.dateOfBirth, "email": profile.email, "photoURL": profile.photoURL, "emergencyContact": profile.emergencyContact, "isActive": profile.isActive, "isVerified": profile.isVerified, "verifiedDocID": profile.verifiedDocID, "about": profile.about, "dateJoined": profile.dateJoined, "score": profile.score, "lat": (CLLocationManager().location?.coordinate.latitude ?? 0.0), "lon": (CLLocationManager().location?.coordinate.longitude ?? 0.0), "commentsID": profile.commentsID]
+
+        if let uri = URL(string: URL_PROFILE_API_END_POINT + "/" + profile.uuid){
+            var request = URLRequest(url: uri)
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: profileData, options: .prettyPrinted)
+                request.httpBody = jsonData
+                request.httpMethod = "PUT"
+                print(jsonData)
+            } catch let e {
+                print(e)
+            }
+            
+            let session: URLSession = {
+                 let configuration = URLSessionConfiguration.default
+                 configuration.timeoutIntervalForRequest = TimeInterval(7)
+                 configuration.timeoutIntervalForResource = TimeInterval(7)
+                 return URLSession(configuration: configuration, delegate: nil, delegateQueue: nil)
+            }()
+            
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            session.dataTask(with: request) { jsonData, res, err in
+                if let data = jsonData {
+                    if let _ = try? JSONDecoder().decode(Profile.self, from: data){
+                        DispatchQueue.main.sync(execute: {
+                            completionHandler(true, "")
+                        })
+                    }
+                }
+            }.resume()
+        }
     }
     
     func insert(profile: Profile, completionHandler: @escaping (Bool, String) -> ()){
@@ -213,34 +216,44 @@ final class SettingsStore: ObservableObject {
         
         defaults.setValue(true, forKey: "isLogin")
         load()
-        completionHandler(true, "")
         
-//        if let uri = URL(string: URL_PROFILE_API_END_POINT){
-//            var request = URLRequest(url: uri)
-//            do {
-//                let jsonData = try JSONSerialization.data(withJSONObject: profile, options: .prettyPrinted)
-//                request.httpBody = jsonData
-//                request.httpMethod = "POST"
-//                print(jsonData)
-//            } catch let e {
-//                print(e)
-//            }
-//
-//            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//            session.dataTask(with: request) { jsonData, res, err in
-//                if let data = jsonData {
+        
+        let profileData: [String: Any] = ["uuid": profile.uuid, "firstName": profile.firstName, "lastName": profile.lastName, "pwd": "google_auth", "gender": profile.gender, "phoneNumber": profile.phoneNumber, "dateOfBirth": DateToStr(date: profile.dateOfBirth), "email": profile.email, "photoURL": profile.photoURL, "emergencyContact": profile.emergencyContact, "isActive": profile.isActive, "isVerified": profile.isVerified, "verifiedDocID": profile.verifiedDocID, "about": profile.about, "dateJoined": DateToStr(date: profile.dateJoined), "score": profile.score, "lat": (CLLocationManager().location?.coordinate.latitude ?? 0.0), "lon": (CLLocationManager().location?.coordinate.longitude ?? 0.0), "commentsID": profile.commentsID]
+        
+        if let uri = URL(string: URL_PROFILE_API_END_POINT){
+            var request = URLRequest(url: uri)
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: profileData, options: .prettyPrinted)
+                request.httpBody = jsonData
+                request.httpMethod = "POST"
+                print(jsonData)
+            } catch let e {
+                print(e)
+            }
+            
+            let session: URLSession = {
+                 let configuration = URLSessionConfiguration.default
+                 configuration.timeoutIntervalForRequest = TimeInterval(7)
+                 configuration.timeoutIntervalForResource = TimeInterval(7)
+                 return URLSession(configuration: configuration, delegate: nil, delegateQueue: nil)
+             }()
+
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            session.dataTask(with: request) { jsonData, res, err in
+                if let _ = jsonData {
 //                    do {
-//                        let decoded = try JSONDecoder().decode(ProfileModel.self, from: data)
+                        DispatchQueue.main.sync(execute: {
+                            completionHandler(true, "")
+                        })
+                        
+//                        let decoded = try JSONDecoder().decode(Profile.self, from: data)
 //                        print(decoded)
 //                    } catch {
 //                        print(error)
 //                    }
-//                    if let profile = try? JSONDecoder().decode(ProfileModel.self, from: data){
+//                    if let _ = try? JSONDecoder().decode(Profile.self, from: data){
 //                        DispatchQueue.main.sync(execute: {
-//                            self.profile.append(profile)
 //                            completionHandler(true, "")
-//                            self.progressDocCheck(profile: profile)
-//                            self.fetchLocation(profile: profile)
 //                        })
 //                    } else  {
 //                        if let message = try? JSONDecoder().decode(ServerMessage.self, from: data){
@@ -253,10 +266,10 @@ final class SettingsStore: ObservableObject {
 //                            })
 //                        }
 //                    }
-//
-//
-//                }
-//            }.resume()
-//        }
+
+
+                }
+            }.resume()
+        }
     }
 }

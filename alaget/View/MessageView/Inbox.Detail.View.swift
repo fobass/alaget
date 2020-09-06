@@ -176,7 +176,7 @@ struct Inbox_Detail_View: View {
         }
         
         .sheet(isPresented: $isPresented) {
-            Explorer_Detail_View(dialogScreen: true)
+            Explorer_Detail_View(uuid: "rrrr", tripid: "d", dialogScreen: true)
         }
         
     }

@@ -44,7 +44,7 @@ struct EditTripDepDateViewCell: View {
             Spacer()
             VStack(spacing: 21){
                 HStack {
-                    Text(getTextFromDate(date: rkManager.startDate) == "" ? getTextFromDate(date: trip.depDate) : getTextFromDate(date: rkManager.startDate))
+                    Text(getTextFromDate(date: rkManager.startDate) == "" ? getTextFromDate(date: trip.depdate) : getTextFromDate(date: rkManager.startDate))
                         .foregroundColor(Color.black)
                         .opacity(getTextFromDate(date: rkManager.startDate) == "" ? 0.3 : 0.8)
                         .font(.system(size: 16))
@@ -62,7 +62,7 @@ struct EditTripDepDateViewCell: View {
                 .foregroundColor(Color.black.opacity(0.6))
                 
                 HStack {
-                    Text(getTextFromDate(date: rkManager.endDate) == "" ? getTextFromDate(date: trip.arrDate) : getTextFromDate(date: rkManager.endDate))
+                    Text(getTextFromDate(date: rkManager.endDate) == "" ? getTextFromDate(date: trip.arrdate) : getTextFromDate(date: rkManager.endDate))
                         .foregroundColor(Color.black)
                         .opacity(getTextFromDate(date: rkManager.endDate) == "" ? 0.3 : 0.8)
                         .font(.system(size: 16))
@@ -157,7 +157,7 @@ struct Edit_Trip_View: View {
             ZStack{
                 TabView(selection: self.$viewId){
                     
-                    SearchView(city: self.$trip.city, country: self.$trip.country, code: self.$trip.code, tripGrpKey: self.$trip.tripGrpKey, nextViewId: self.$viewId)
+                    SearchView(city: self.$trip.city, country: self.$trip.country, code: self.$trip.code, tripGrpKey: self.$trip.tripgrpkey, nextViewId: self.$viewId)
                         .padding([.leading, .trailing], 20)
                         .padding([.top, .bottom], 15)
                         .tag(0)
@@ -181,8 +181,8 @@ struct Edit_Trip_View: View {
                             })
                             Spacer()
                             Button(action: {
-                                self.trip.depDate = (self.rkManager.startDate != nil) ? self.rkManager.startDate : self.trip.depDate
-                                self.trip.arrDate = (self.rkManager.endDate != nil) ? self.rkManager.endDate : self.trip.arrDate
+                                self.trip.depdate = (self.rkManager.startDate != nil) ? self.rkManager.startDate : self.trip.depdate
+                                self.trip.arrdate = (self.rkManager.endDate != nil) ? self.rkManager.endDate : self.trip.arrdate
                                 self.store.update(trip: self.trip)
                                 self.presentationMode.wrappedValue.dismiss()
                             }, label: {
@@ -237,7 +237,7 @@ struct Edit_Trip_View: View {
 
 struct Edit_Trip_View_Previews: PreviewProvider {
     
-    static var trip = Trip.init(userID: "ww", country: "Moscow", city: "Moscow", code: "001", remark: "sad", lastUpdate: "sdf", image: "sf", lat: 0.1, lon: 0.3, distance: 2.0, tripGrpKey: "")
+    static var trip = Trip.init(uuid: "ww", country: "Moscow", city: "Moscow", code: "001", remark: "sad", lastupdate: "sdf", tripgrpkey: "")
     
     static var previews: some View {
         Edit_Trip_View(trip: trip).environmentObject(TripStore())

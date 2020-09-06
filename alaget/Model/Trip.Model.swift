@@ -7,31 +7,27 @@
 
 import Foundation
 
-struct Trip: Identifiable, Equatable {
+struct Trip: Identifiable, Equatable, Codable {
     var id = UUID()
-    var userID  : String
+    var uuid  : String
     var country : String
     var city    : String
     var code    : String
-    var depDate  = Date()
-    var arrDate  = Date()
+    var depdate = Date()
+    var arrdate = Date()
     var remark  : String
-    var lastUpdate : String
-    var image   : String
-    var lat: Double
-    var lon: Double
-    var distance: Double
-    var tripGrpKey: String
+    var lastupdate : String
+    var tripgrpkey: String
     
-    var displayDistance : String {
-        get {
-            if distance > 0 {
-                return String(format: "%.1f", distance) + "km"
-            } else {
-                return ""
-            }
-        }
-    }
+//    var displayDistance : String {
+//        get {
+//            if distance > 0 {
+//                return String(format: "%.1f", distance) + "km"
+//            } else {
+//                return ""
+//            }
+//        }
+//    }
     
     var display : String {
         get {
@@ -48,7 +44,7 @@ struct Trip: Identifiable, Equatable {
             let formatter = DateFormatter()
             formatter.locale = .current
             formatter.dateFormat = "MMM dd"
-            return formatter.string(from: depDate)
+            return formatter.string(from: depdate)
         }
     }
     
@@ -57,7 +53,7 @@ struct Trip: Identifiable, Equatable {
             let formatter = DateFormatter()
             formatter.locale = .current
             formatter.dateFormat = "MMMM dd, EEEE"
-            return formatter.string(from: depDate)
+            return formatter.string(from: depdate)
         }
     }
     var depDateMYSQL: String {
@@ -65,7 +61,7 @@ struct Trip: Identifiable, Equatable {
             let formatter = DateFormatter()
             formatter.locale = .current
             formatter.dateFormat = "YYYY-MM-dd hh:mm:ss"
-            return formatter.string(from: depDate)
+            return formatter.string(from: depdate)
         }
     }
     
@@ -74,7 +70,7 @@ struct Trip: Identifiable, Equatable {
             let formatter = DateFormatter()
             formatter.locale = .current
             formatter.dateFormat = "YYYY-MM-dd hh:mm:ss"
-            return formatter.string(from: arrDate)
+            return formatter.string(from: arrdate)
         }
     }
     
@@ -83,7 +79,7 @@ struct Trip: Identifiable, Equatable {
             let formatter = DateFormatter()
             formatter.locale = .current
             formatter.dateFormat = "EE, MMM d"
-            return formatter.string(from: depDate)
+            return formatter.string(from: depdate)
         }
     }
     var getHourDisplay: String {
@@ -91,7 +87,7 @@ struct Trip: Identifiable, Equatable {
             let formatter = DateFormatter()
             formatter.locale = .current
             formatter.dateFormat = "EE, hh:mm a"
-            return formatter.string(from: depDate)
+            return formatter.string(from: depdate)
         }
     }
     

@@ -494,7 +494,7 @@ struct NewTripRemarkViewCell: View {
 }
 
 struct New_Trip_View: View {
-    @State var trip: Trip = Trip.init( userID: "", country: "", city: "", code: "", remark: "", lastUpdate: "", image: "", lat: 0.0, lon: 0.0, distance: 0.0, tripGrpKey: "")
+    @State var trip: Trip = Trip.init(uuid: "", country: "", city: "", code: "", remark: "", lastupdate: "", tripgrpkey: "")
     var rkManager = RKManager(calendar: Calendar.current, minimumDate: Date(), maximumDate: Date().addingTimeInterval(60*60*24*365), mode: 1)
     @State var viewId: Int = 0
     @Environment(\.presentationMode) var presentationMode
@@ -527,7 +527,7 @@ struct New_Trip_View: View {
             ZStack{
                 TabView(selection: self.$viewId){
                     
-                    SearchView(city: self.$trip.city, country: self.$trip.country, code: self.$trip.code, tripGrpKey: self.$trip.tripGrpKey, nextViewId: self.$viewId)
+                    SearchView(city: self.$trip.city, country: self.$trip.country, code: self.$trip.code, tripGrpKey: self.$trip.tripgrpkey, nextViewId: self.$viewId)
                         .padding([.leading, .trailing], 20)
                         .padding([.top, .bottom], 15)
                         .tag(0)
@@ -551,8 +551,10 @@ struct New_Trip_View: View {
                             })
                             Spacer()
                             Button(action: {
-                                self.trip.depDate = self.rkManager.startDate
-                                self.trip.arrDate = self.rkManager.endDate
+                                self.trip.depdate = self.rkManager.startDate
+                                self.trip.arrdate = self.rkManager.endDate
+                                self.trip.uuid = userStore.profile.uuid
+                                self.trip.lastupdate = DateToStr(date: Date())
                                 self.store.insert(trip: self.trip)
                                 self.presentationMode.wrappedValue.dismiss()
                             }, label: {

@@ -12,15 +12,22 @@ import SwiftUI
 
 
 final class TripStore: ObservableObject {
-    @Published var trips: [Trip] = []
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @Published var trips: [Trip] = []
     @Published var selectedItem: Trip?
     @Published var isChaged: Bool = false
+    let session: URLSession = {
+         let configuration = URLSessionConfiguration.default
+         configuration.timeoutIntervalForRequest = TimeInterval(7)
+         configuration.timeoutIntervalForResource = TimeInterval(7)
+         return URLSession(configuration: configuration, delegate: nil, delegateQueue: nil)
+     }()
+    
     init() {
-        self.trips = [
-            Trip.init(userID: "asd", country: "asd", city: "asd", code: "sdf", remark: "sdf", lastUpdate: "wqe", image: "asd", lat: 0, lon: 0, distance: 0, tripGrpKey: "asd"),
-            Trip.init(userID: "asd", country: "asd", city: "asd", code: "sdf", remark: "sdf", lastUpdate: "wqe", image: "asd", lat: 0, lon: 0, distance: 0, tripGrpKey: "asd")
-        ]
+//        self.trips = [
+//            Trip.init(userID: "asd", country: "asd", city: "asd", code: "sdf", remark: "sdf", lastUpdate: "wqe", image: "asd", lat: 0, lon: 0, distance: 0, tripGrpKey: "asd"),
+//            Trip.init(userID: "asd", country: "asd", city: "asd", code: "sdf", remark: "sdf", lastUpdate: "wqe", image: "asd", lat: 0, lon: 0, distance: 0, tripGrpKey: "asd")
+//        ]
         load()
     }
     
@@ -37,15 +44,11 @@ final class TripStore: ObservableObject {
                     let code = (item as AnyObject).code!! as String
                     let remark = (item as AnyObject).remark!! as String
                     let lastupd = (item as AnyObject).lastUpdate!! as String
-                    let image = (item as AnyObject).image!! as String
                     let arrDate = (item as AnyObject).arrDate!! as Date
                     let depDate = (item as AnyObject).depDate!! as Date
-                    let distance = (item as AnyObject).distance! as Double
-                    let lat = (item as AnyObject).distance! as Double
-                    let lon = (item as AnyObject).distance! as Double
                     let tripGrpKey = (item as AnyObject).tripGrpKey!! as String
                     
-                    let trip = Trip.init(id: id, userID: userID, country: country, city: city, code: code, depDate: depDate, arrDate: arrDate, remark: remark, lastUpdate: lastupd, image: image, lat: lat, lon: lon, distance: distance, tripGrpKey: tripGrpKey)
+                    let trip = Trip.init(id: id, uuid: userID, country: country, city: city, code: code, depdate: depDate, arrdate: arrDate, remark: remark, lastupdate: lastupd, tripgrpkey: tripGrpKey)
                     
                     self.trips.append(trip)
                 }
@@ -53,31 +56,58 @@ final class TripStore: ObservableObject {
         }
     }
     func insert(trip: Trip) {
+        
         let table = Trips(context: appDelegate.persistentContainer.viewContext)
         table.id   = trip.id
-        table.userID  = "trip.userID"
+        table.userID  = trip.uuid
         table.country = trip.country
         table.city    = trip.city
         table.code    = trip.code
         table.remark  = trip.remark
-        table.image   = trip.image
-        table.arrDate = trip.arrDate
-        table.depDate = trip.depDate
-        table.distance = trip.distance
-        table.lastUpdate = trip.lastUpdate
-        table.lat = trip.lat
-        table.lon = trip.lon
-        table.tripGrpKey = trip.tripGrpKey
+        table.arrDate = trip.arrdate
+        table.depDate = trip.depdate
+        table.lastUpdate = trip.lastupdate
+        table.tripGrpKey = trip.tripgrpkey
         
         do {
             try appDelegate.persistentContainer.viewContext.save()
             // completionHandler(true, "Successful")
-            self.trips.append(trip)
+//            self.trips.append(trip)
             print("Successfuly Saved to core Data")
         }catch {
             debugPrint("Tony: Could not save \(error.localizedDescription)")
             // completionHandler(false, "Successful")
         }
+        
+        let insertData: [String: Any] = ["id": trip.id.uuidString, "uuid": trip.uuid, "country": trip.country, "city": trip.city, "code": trip.code, "depdate": DateToStr(date: trip.depdate), "arrdate": DateToStr(date: trip.arrdate), "remark": trip.remark, "lastupdate": trip.lastupdate, "tripgrpkey": trip.tripgrpkey]
+                     
+                if let uri = URL(string: URL_TRIPS_API_END_POINT){
+                    var request = URLRequest(url: uri)
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: insertData, options: .prettyPrinted)
+                        request.httpBody = jsonData
+                        request.httpMethod = "POST"
+                        print(jsonData)
+                    } catch let e {
+                        print(e)
+                    }
+                    
+                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                    session.dataTask(with: request) { jsonData, res, err in
+                        if let data = jsonData {
+                            do {
+                                let trip = try JSONDecoder().decode(Trip.self, from: data)
+                                DispatchQueue.main.sync(execute: {
+                                    self.trips.append(trip)
+//                                    completionHandler(true, "")
+                                })
+                            } catch {
+                                print(error)
+                            }
+                            
+                        }
+                    }.resume()
+                }
         
     }
     
@@ -93,16 +123,12 @@ final class TripStore: ObservableObject {
         object.setValue(trip.country, forKey: "userID")
         object.setValue(trip.country, forKey: "country")
         object.setValue(trip.city, forKey: "city")
-        object.setValue(trip.arrDate, forKey: "arrDate")
-        object.setValue(trip.depDate, forKey: "depDate")
+        object.setValue(trip.arrdate, forKey: "arrDate")
+        object.setValue(trip.depdate, forKey: "depDate")
         object.setValue(trip.code, forKey: "code")
         object.setValue(trip.remark, forKey: "remark")
-        object.setValue(trip.lastUpdate, forKey: "lastUpdate")
-        object.setValue(trip.image, forKey: "image")
-        object.setValue(trip.distance, forKey: "distance")
-        object.setValue(trip.lat, forKey: "lat")
-        object.setValue(trip.lon, forKey: "lon")
-        object.setValue(trip.tripGrpKey, forKey: "tripGrpKey")
+        object.setValue(trip.lastupdate, forKey: "lastUpdate")
+        object.setValue(trip.tripgrpkey, forKey: "tripGrpKey")
         
         do {
             try appDelegate.persistentContainer.viewContext.save()
@@ -111,7 +137,6 @@ final class TripStore: ObservableObject {
                 self.trips.remove(at: row)
                 self.trips.append(trip)
             }
-            //                  update(trip: trip)
             print("Successfuly Updated to core Data")
         }catch {
             debugPrint("Tony: Could not save \(error.localizedDescription)")
@@ -120,6 +145,47 @@ final class TripStore: ObservableObject {
         
         
     }
+    
+    func deleteAllData() {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Trips")
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        do {
+            try appDelegate.persistentContainer.viewContext.execute(batchDeleteRequest)
+        }
+        catch {
+            print(error)
+        }
+        
+//        if let uri = URL(string: URL_TRIPS_API_END_POINT + "/" + tripID){
+//            var request = URLRequest(url: uri)
+//            request.httpMethod = "DELETE"
+//            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//            session.dataTask(with: request) { jsonData, res, err in
+//                if let data = jsonData {
+//
+//                    do {
+//                        let decoded = try JSONDecoder().decode(ServerMessage.self, from: data)
+//                        print(decoded)
+//                    } catch {
+//                        print(error)
+//                    }
+//
+//                    if let message = try? JSONDecoder().decode(ServerMessage.self, from: data){
+//                        DispatchQueue.main.sync(execute: {
+//                            if (message.message.contains("successfully")) {
+//                                if let row = self.trips.firstIndex(where: {$0.tripID == self._tripID})  {
+//                                    self.trips.remove(at: row )
+//                                    completionHandler(true, "")
+//                                }
+//                            }
+//                        })
+//                    }
+//                }
+//            }.resume()
+//        }
+
+
+      }
     
     func remove(id: UUID)  {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Trips")

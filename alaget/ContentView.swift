@@ -24,7 +24,8 @@ struct ContentView: View {
     var body: some View {
         VStack{
             TabView(selection: self.$selection){
-                Explorer_View().tabItem {
+                Explorer_View().environmentObject(explorerStore)
+                    .tabItem {
                     Image(systemName: (selection == 0) ? "magnifyingglass" : "magnifyingglass")
                         .resizable()
                         .imageScale(.large)
@@ -40,7 +41,8 @@ struct ContentView: View {
                 }
                 .tag(1)
                 
-                Trip_View().tabItem {
+                Trip_View().environmentObject(tripStore)
+                    .tabItem {
                     Image(systemName: "globe")
                         .resizable()
                       .imageScale(.large)
