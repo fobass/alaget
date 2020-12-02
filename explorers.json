@@ -350,19 +350,22 @@
       ],
       "companies":[
          {
+            "id": "xyz1",
             "name":"Cargo",
             "web":"http://",
-            "logoURL":"http://28"
+            "logoURL":"https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg"
          },
          {
+            "id": "xyz2",
             "name":"DHL",
             "web":"http://",
-            "logoURL":"http://29"
+            "logoURL":"https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg"
          },
          {
+            "id": "xyz3",
             "name":"Express",
             "web":"http://",
-            "logoURL":"http://30"
+            "logoURL":"https://lh5.googleusercontent.com/-Hf39m3vuIQ0/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck_EkXVt6V-vwY6XZiSsguK7MCb_A/photo.jpg"
          }
       ]
    }
