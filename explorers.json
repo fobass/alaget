@@ -3,115 +3,115 @@
       "today":[
          {
             "id":"xxyy1",
-            "tripgrpkey":"0118",
+            "tripGrpKey":"0118",
             "country":"Malaysia",
             "city":"KL",
             "travelers":[
                {
                   "id":"xx1",
-                  "firstname":"Liam",
+                  "firstName":"Liam",
                   "remark":"Hello im flyin to1",
-                  "photourl":"http://1",
-                  "isverified":1,
+                  "photoURL":"http://1",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1q",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1q",
+                  "depDate":"10/10/2020"
                },
                {
                   "id":"xx2",
-                  "firstname":"Noah",
+                  "firstName":"Noah",
                   "remark":"Hello im flyin to2",
-                  "photourl":"http://2",
-                  "isverified":1,
+                  "photoURL":"http://2",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1w",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1w",
+                  "depDate":"10/10/2020"
                },
                {
                   "id":"xx3",
-                  "firstname":"William",
+                  "firstName":"William",
                   "remark":"Hello im flyin to3",
-                  "photourl":"http://3",
-                  "isverified":1,
+                  "photoURL":"http://3",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1e",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1e",
+                  "depDate":"10/10/2020"
                }
             ]
          },
          {
             "id":"xxyy2",
-            "tripgrpkey":"0119",
+            "tripGrpKey":"0119",
             "country":"Singapore",
             "city":"SG",
             "travelers":[
                {
                   "id":"xx4",
-                  "firstname":"James",
+                  "firstName":"James",
                   "remark":"Hello im flyin to4",
-                  "photourl":"http://4",
-                  "isverified":1,
+                  "photoURL":"http://4",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1r",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1r",
+                  "depDate":"10/10/2020"
                },
                {
                   "id":"xx5",
-                  "firstname":"Logan",
+                  "firstName":"Logan",
                   "remark":"Hello im flyin to5",
-                  "photourl":"http://5",
-                  "isverified":1,
+                  "photoURL":"http://5",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1t",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1t",
+                  "depDate":"10/10/2020"
                },
                {
                   "id":"xx6",
-                  "firstname":"Benjamin",
+                  "firstName":"Benjamin",
                   "remark":"Hello im flyin to6",
-                  "photourl":"http://6",
-                  "isverified":1,
+                  "photoURL":"http://6",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1y",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1y",
+                  "depDate":"10/10/2020"
                }
             ]
          },
          {
             "id":"xxyy3",
-            "tripgrpkey":"0120",
+            "tripGrpKey":"0120",
             "country":"Russia",
             "city":"Moscow",
             "travelers":[
                {
                   "id":"xx7",
-                  "firstname":"Mason",
+                  "firstName":"Mason",
                   "remark":"Hello im flyin to7",
-                  "photourl":"http://7",
-                  "isverified":1,
+                  "photoURL":"http://7",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1u",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1u",
+                  "depDate":"10/10/2020"
                },
                {
                   "id":"xx8",
-                  "firstname":"Elijah",
+                  "firstName":"Elijah",
                   "remark":"Hello im flyin to9",
-                  "photourl":"http://8",
-                  "isverified":1,
+                  "photoURL":"http://8",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1i",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1i",
+                  "depDate":"10/10/2020"
                },
                {
                   "id":"xx9",
-                  "firstname":"Oliver",
+                  "firstName":"Oliver",
                   "remark":"Hello im flyin to9",
-                  "photourl":"http://9",
-                  "isverified":1,
+                  "photoURL":"http://9",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1o",
-                  "depdate":"10/10/2020"
+                  "tripId":"tt1o",
+                  "depDate":"10/10/2020"
                }
             ]
          }
@@ -119,115 +119,115 @@
       "week":[
          {
             "id":"xxyy4",
-            "tripgrpkey":"0118",
+            "tripGrpKey":"0118",
             "country":"Malaysia",
             "city":"KL",
             "travelers":[
                {
                   "id":"xx10",
-                  "firstname":"Jacob",
+                  "firstName":"Jacob",
                   "remark":"",
-                  "photourl":"http://10",
-                  "isverified":1,
+                  "photoURL":"http://10",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1p",
-                  "depdate":"10/11/2020"
+                  "tripId":"tt1p",
+                  "depDate":"10/11/2020"
                },
                {
                   "id":"xx12",
-                  "firstname":"Lucas",
+                  "firstName":"Lucas",
                   "remark":"Hello im flyin to10",
-                  "photourl":"http://11",
-                  "isverified":1,
+                  "photoURL":"http://11",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1a",
-                  "depdate":"10/11/2020"
+                  "tripId":"tt1a",
+                  "depDate":"10/11/2020"
                },
                {
                   "id":"xx13",
-                  "firstname":"Michael",
+                  "firstName":"Michael",
                   "remark":"Hello im flyin to11",
-                  "photourl":"http://12",
-                  "isverified":1,
+                  "photoURL":"http://12",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1s",
-                  "depdate":"10/11/2020"
+                  "tripId":"tt1s",
+                  "depDate":"10/11/2020"
                }
             ]
          },
          {
             "id":"xxyy5",
-            "tripgrpkey":"0119",
+            "tripGrpKey":"0119",
             "country":"Singapore",
             "city":"SG",
             "travelers":[
                {
                   "id":"xx14",
-                  "firstname":"Alexander",
+                  "firstName":"Alexander",
                   "remark":"Hello im flyin to12",
-                  "photourl":"http://13",
-                  "isverified":1,
+                  "photoURL":"http://13",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1d",
-                  "depdate":"10/12/2020"
+                  "tripId":"tt1d",
+                  "depDate":"10/12/2020"
                },
                {
                   "id":"xx15",
-                  "firstname":"Ethan",
+                  "firstName":"Ethan",
                   "remark":"Hello im flyin to13",
-                  "photourl":"http://14",
-                  "isverified":1,
+                  "photoURL":"http://14",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1f",
-                  "depdate":"10/12/2020"
+                  "tripId":"tt1f",
+                  "depDate":"10/12/2020"
                },
                {
                   "id":"xx16",
-                  "firstname":"Daniel",
+                  "firstName":"Daniel",
                   "remark":"Hello",
-                  "photourl":"http://15",
-                  "isverified":1,
+                  "photoURL":"http://15",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1g",
-                  "depdate":"10/142/2020"
+                  "tripId":"tt1g",
+                  "depDate":"10/142/2020"
                }
             ]
          },
          {
             "id":"xxyy6",
-            "tripgrpkey":"0120",
+            "tripGrpKey":"0120",
             "country":"Russia",
             "city":"Moscow",
             "travelers":[
                {
                   "id":"xx17",
-                  "firstname":"Matthew",
+                  "firstName":"Matthew",
                   "remark":"Hello im ",
-                  "photourl":"http://16",
-                  "isverified":1,
+                  "photoURL":"http://16",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1h",
-                  "depdate":"10/14/2020"
+                  "tripId":"tt1h",
+                  "depDate":"10/14/2020"
                },
                {
                   "id":"xx18",
-                  "firstname":"Aiden",
+                  "firstName":"Aiden",
                   "remark":"Hello im flyin",
-                  "photourl":"http://17",
-                  "isverified":1,
+                  "photoURL":"http://17",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1j",
-                  "depdate":"10/14/2020"
+                  "tripId":"tt1j",
+                  "depDate":"10/14/2020"
                },
                {
                   "id":"xx19",
-                  "firstname":"Henry",
+                  "firstName":"Henry",
                   "remark":"H",
-                  "photourl":"http://18",
-                  "isverified":1,
+                  "photoURL":"http://18",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1k",
-                  "depdate":"10/14/2020"
+                  "tripId":"tt1k",
+                  "depDate":"10/14/2020"
                }
             ]
          }
@@ -235,115 +235,115 @@
       "other":[
          {
             "id":"xxyy7",
-            "tripgrpkey":"0118",
+            "tripGrpKey":"0118",
             "country":"Malaysia",
             "city":"KL",
             "travelers":[
                {
                   "id":"xx20",
-                  "firstname":"Joseph",
+                  "firstName":"Joseph",
                   "remark":"Hel",
-                  "photourl":"http://19",
-                  "isverified":1,
+                  "photoURL":"http://19",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1l",
-                  "depdate":"11/10/2020"
+                  "tripId":"tt1l",
+                  "depDate":"11/10/2020"
                },
                {
                   "id":"xx21",
-                  "firstname":"Jackson",
+                  "firstName":"Jackson",
                   "remark":"Hell",
-                  "photourl":"http://20",
-                  "isverified":1,
+                  "photoURL":"http://20",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1z",
-                  "depdate":"11/10/2020"
+                  "tripId":"tt1z",
+                  "depDate":"11/10/2020"
                },
                {
                   "id":"xx22",
-                  "firstname":"Samuel",
+                  "firstName":"Samuel",
                   "remark":" to",
-                  "photourl":"http://21",
-                  "isverified":1,
+                  "photoURL":"http://21",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1x",
-                  "depdate":"11/10/2020"
+                  "tripId":"tt1x",
+                  "depDate":"11/10/2020"
                }
             ]
          },
          {
             "id":"xxyy8",
-            "tripgrpkey":"0119",
+            "tripGrpKey":"0119",
             "country":"Singapore",
             "city":"SG",
             "travelers":[
                {
                   "id":"xx23",
-                  "firstname":"Sebastian",
+                  "firstName":"Sebastian",
                   "remark":"",
-                  "photourl":"http://22",
-                  "isverified":1,
+                  "photoURL":"http://22",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1c",
-                  "depdate":"12/10/2020"
+                  "tripId":"tt1c",
+                  "depDate":"12/10/2020"
                },
                {
                   "id":"xx24",
-                  "firstname":"David",
+                  "firstName":"David",
                   "remark":"",
-                  "photourl":"http://23",
-                  "isverified":1,
+                  "photoURL":"http://23",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1v",
-                  "depdate":"12/10/2020"
+                  "tripId":"tt1v",
+                  "depDate":"12/10/2020"
                },
                {
                   "id":"xx25",
-                  "firstname":"Carter",
+                  "firstName":"Carter",
                   "remark":"",
-                  "photourl":"http://24",
-                  "isverified":1,
+                  "photoURL":"http://24",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1b",
-                  "depdate":"12/10/2020"
+                  "tripId":"tt1b",
+                  "depDate":"12/10/2020"
                }
             ]
          },
          {
             "id":"xxyy9",
-            "tripgrpkey":"0120",
+            "tripGrpKey":"0120",
             "country":"Russia",
             "city":"Moscow",
             "travelers":[
                {
                   "id":"xx26",
-                  "firstname":"Jayden",
+                  "firstName":"Jayden",
                   "remark":"flyin to",
-                  "photourl":"http://25",
-                  "isverified":1,
+                  "photoURL":"http://25",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1n",
-                  "depdate":"01/10/2020"
+                  "tripId":"tt1n",
+                  "depDate":"01/10/2020"
                },
                {
                   "id":"xx27",
-                  "firstname":"John",
+                  "firstName":"John",
                   "remark":" to",
-                  "photourl":"http://26",
-                  "isverified":1,
+                  "photoURL":"http://26",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1m",
-                  "depdate":"01/10/2020"
+                  "tripId":"tt1m",
+                  "depDate":"01/10/2020"
                },
                {
                   "id":"xx28",
-                  "firstname":"Owen",
+                  "firstName":"Owen",
                   "remark":"Hello",
-                  "photourl":"http://27",
-                  "isverified":1,
+                  "photoURL":"http://27",
+                  "isVerified":1,
                   "distance":"55",
-                  "tripid":"tt1qq",
-                  "depdate":"01/10/2020"
+                  "tripId":"tt1qq",
+                  "depDate":"01/10/2020"
                }
             ]
          }
@@ -352,17 +352,17 @@
          {
             "name":"Cargo",
             "web":"http://",
-            "logourl":"http://28"
+            "logoURL":"http://28"
          },
          {
             "name":"DHL",
             "web":"http://",
-            "logourl":"http://29"
+            "logoURL":"http://29"
          },
          {
             "name":"Express",
             "web":"http://",
-            "logourl":"http://30"
+            "logoURL":"http://30"
          }
       ]
    }
